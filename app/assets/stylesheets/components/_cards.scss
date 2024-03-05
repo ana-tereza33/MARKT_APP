@@ -1,0 +1,47 @@
+
+.card-farmer {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px #00000033;
+  margin-bottom: 20px;
+}
+
+.card-farmer-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-farmer h2 {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  color: #006400;
+}
+
+.card-farmer-content {
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.card-farmer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-farmer-details p {
+  margin: 5px 0;
+}
+
+.card-farmer-details i {
+  margin-right: 5px;
+}
+
+.card-farmer-details .user,
+.card-farmer-details .title,
+.card-farmer-details .description-profile,
+.card-farmer-details .address {
+  font-size: 14px;
+  color: #333;
+}
