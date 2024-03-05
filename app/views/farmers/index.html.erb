@@ -1,4 +1,34 @@
-<h1>Farmers#index</h1>
-<p>Find me in app/views/farmers/index.html.erb</p>
+<div class="container">
+  <h1>Our Farmers</h1>
+  <p>Take a look at our local Farmers</p>
 
+  <div class="row row-margin">
+    <% @farmers.each_slice(2) do |farmer_group| %>
+      <% farmer_group.each do |farmer| %>
 
+        <div class="col-md-6 card-garden-col">
+          <div class="card-farmer border p-3 position-relative">
+            <% if farmer.main_photo.present? %>
+              <%= cl_image_tag farmer.main_photo.key, alt: "#{farmer.name} Image", class: "card-farmer-img" %>
+            <% end %>
+
+            <div class="card-farmer-content">
+              <h2><%= link_to farmer.name, farmer_path(farmer), class: "text-decoration-none text-success" %></h2>
+              <p class="mb-3"><%= farmer.description %></p>
+
+              <div class="card-farmer-details">
+                <p class="user"><i class="fas fa-user"></i> <%= farmer.user.name %></p>
+                <p class="title"><i class="fas fa-tag"></i> <%= farmer.title %></p>
+                <p class="description-profile"><i class="fas fa-info-circle"></i> <%= farmer.description_profile %></p>
+                <p class="address"><i class="fas fa-map-marker-alt"></i> <%= farmer.address %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+
+  <br />
+</div>
