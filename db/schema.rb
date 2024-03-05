@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_05_093607) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_05_095329) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +30,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_093607) do
     t.index ["user_id"], name: "index_baskets_on_user_id"
   end
 
+  create_table "chat_messages", force: :cascade do |t|
+    t.bigint "chat_id", null: false
+    t.bigint "user_id", null: false
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_chat_messages_on_chat_id"
+    t.index ["user_id"], name: "index_chat_messages_on_user_id"
+  end
+
+  create_table "chats", force: :cascade do |t|
+    t.bigint "farmer_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_chats_on_farmer_id"
+    t.index ["user_id"], name: "index_chats_on_user_id"
+  end
+
   create_table "farmers", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
@@ -40,6 +59,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_093607) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_farmers_on_user_id"
+  end
+
+  create_table "order_products", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_products_on_order_id"
+    t.index ["product_id"], name: "index_order_products_on_product_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -67,6 +102,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_093607) do
   add_foreign_key "basket_products", "baskets"
   add_foreign_key "basket_products", "products"
   add_foreign_key "baskets", "users"
+  add_foreign_key "chat_messages", "chats"
+  add_foreign_key "chat_messages", "users"
+  add_foreign_key "chats", "farmers"
+  add_foreign_key "chats", "users"
   add_foreign_key "farmers", "users"
+  add_foreign_key "order_products", "orders"
+  add_foreign_key "order_products", "products"
+  add_foreign_key "orders", "users"
   add_foreign_key "products", "farmers"
 end
