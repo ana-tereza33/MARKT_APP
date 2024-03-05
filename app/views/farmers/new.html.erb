@@ -1,0 +1,9 @@
+<div class="container">
+<h1>New Farmer</h1>
+  <%= simple_form_for(@farmer) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.submit "Create", id: "booking-button" %>
+  <% end %>
+</div>

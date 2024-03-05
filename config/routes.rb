@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # get 'chats/show'
+  resources :chats, only: [:show]
+
+  # get 'farmers/index'
+  # get 'farmers/show'
+  # get 'farmers/profile'
+  resources :farmers, only: [:index, :show, :new, :create, :edit, :update]
+
+  # TODO Add Edit & Create to farmers!!!
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
