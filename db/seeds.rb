@@ -35,8 +35,8 @@ carsten = User.create(name: "Carsten", address: "", email: "carsten@email.com", 
 
 farmer1 = Farmer.new(
   user: ana,
-  latitude: ,
-  longitude: ,
+  latitude: nil,
+  longitude: nil,
   title: "Hof Obst sells fruit",
   description_profile: "A farmer.",
   description_farm: "A farmer in Brandenburg, passionate about apples.",
@@ -56,8 +56,8 @@ farmer1.save
 
 farmer2 = Farmer.new(
   user: carsten,
-  latitude: ,
-  longitude: ,
+  latitude: nil,
+  longitude: nil,
   title: "Behringhof sells fruit such as berries and apples",
   description_profile: "A farmer.",
   description_farm: "A farmer in Brandenburg, passionate about berries andapples.",
@@ -77,7 +77,7 @@ farmer2.save
 
 product1 = Product.new(
   name: "carrot",
-  farmer: carsten,
+  farmer: farmer2.user_id,
   price: "1,20 €",
   quantity: "30",
   description: "organic, heirloom carrots",
