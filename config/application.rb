@@ -30,3 +30,9 @@ module MarktApp
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# Cloudinary.config do |config|
+#   config.cloud_name = 'deine_cloud_name'
+#   config.api_key = 'deine_api_key'
+#   config.api_secret = 'dein_api_secret'
+# end
