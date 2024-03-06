@@ -20,6 +20,9 @@ farm_photo7 = URI.open("https://thinkport.org/mptclassroom/mdfh/organic-farming/
 farm_photo8 = URI.open("https://jacoblund.com/cdn/shop/products/bf8335394b08d71a9c71f24279cdf8dd.jpg?v=1694678770")
 
 product_photo1 = URI.open("https://cdn11.bigcommerce.com/s-a9b4a/images/stencil/1280x1280/products/1196/6690/Little-Fingers-and-Organic-Little-Fingers-Carrots__69944.1666917020.jpg?c=2")
+product_photo2 = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThxLbqQ6gg8i9Z-cWaQNJxGm7imSHH1fEqEg&usqp=CAU")
+product_photo3 = URI.open("https://www.yorktest.com/wp-content/uploads/2021/12/AdobeStock_275778955-1024x683.jpeg")
+product_photo4 = URI.open("https://images.squarespace-cdn.com/content/v1/5de5df7f9f40c13aa6a8b579/1599183475729-668O0RQG0N41AIHKWEXU/intro-1597860204.jpg")
 
 ana = User.create(name: "Ana", address: "Kochstraße 26, Berlin", email: "ana@email.com", password: "123456", is_farmer: true)
 carl = User.create(name: "Carl", address: "Alexanderplatz 5, Berlin", email: "carl@email.com", password: "123456", is_farmer: false)
@@ -74,7 +77,7 @@ farmer_profile_2.save!
 puts "#{Farmer.count} Farmers created 🥕 🥕 🥕"
 
 product1 = Product.new(
-  name: "carrot",
+  name: "Carrot",
   farmer: farmer_profile_2,
   price: "1,20 €",
   quantity: "30",
@@ -84,5 +87,41 @@ product1 = Product.new(
 product1.product_photo.attach(io: product_photo1, filename: "product1_photo", content_type: "image/jpg")
 
 product1.save!
+
+product2 = Product.new(
+  name: "Broccoli",
+  farmer: farmer_profile_2,
+  price: "1,20 €",
+  quantity: "30",
+  description: "organic, heirloom broccolis",
+)
+
+product2.product_photo.attach(io: product_photo2, filename: "product2_photo", content_type: "image/jpg")
+
+product2.save!
+
+product3 = Product.new(
+  name: "Potato",
+  farmer: farmer_profile_2,
+  price: "1,20 €",
+  quantity: "30",
+  description: "organic, heirloom potatos",
+)
+
+product3.product_photo.attach(io: product_photo3, filename: "product3_photo", content_type: "image/jpg")
+
+product3.save!
+
+product4 = Product.new(
+  name: "Red onions",
+  farmer: farmer_profile_2,
+  price: "1,20 €",
+  quantity: "30",
+  description: "organic, heirloom onions",
+)
+
+product4.product_photo.attach(io: product_photo4, filename: "product4_photo", content_type: "image/jpg")
+
+product4.save!
 
 puts "#{Product.count} Product created 🍎 🍎 🍎"

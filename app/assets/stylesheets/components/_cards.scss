@@ -8,9 +8,10 @@
 }
 
 .card-farmer-img {
-  height: 200px;
+  height: 140px;
   width: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .card-farmer h2 {
@@ -44,4 +45,16 @@
 .card-farmer-details .address {
   font-size: 14px;
   color: #333;
+}
+
+.product-card {
+  width: 48%;
+  border-radius: 15px;
+}
+
+.card-product-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
