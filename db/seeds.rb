@@ -25,15 +25,15 @@ ana = User.create(name: "Ana", address: "Kochstraße 26, Berlin", email: "ana@em
 carl = User.create(name: "Carl", address: "Alexanderplatz 5, Berlin", email: "carl@email.com", password: "123456", is_farmer: false)
 charly = User.create(name: "Charly", address: "Hermanstraße 22, Berlin", email: "charly@email.com", password: "123456", is_farmer: false)
 carsten = User.create(name: "Carsten", address: "Brandenburger Tor 1, Berlin", email: "carsten@email.com", password: "123456", is_farmer: true)
-carsten = User.create(name: "Olivier", address: "Brandenburger Tor 1, Berlin", email: "olivier@email.com", password: "123456", is_farmer: true)
-carsten = User.create(name: "Emma", address: "Brandenburger Tor 1, Berlin", email: "emma@test.com", password: "123456", is_farmer: true)
+olivier = User.create(name: "Olivier", address: "Brandenburger Tor 1, Berlin", email: "olivier@email.com", password: "123456", is_farmer: true)
+emma = User.create(name: "Emma", address: "Brandenburger Tor 1, Berlin", email: "emma@test.com", password: "123456", is_farmer: true)
 
 puts "#{User.count} Users created 🥳"
 
 farmer1 = Farmer.new(
   user: ana,
-  title: "Hof Obst sells fruit",
-  description_profile: "A farmer.",
+  title: "Barros Farm",
+  description_profile: "An apple farm",
   description_farm: "A farmer in Brandenburg, passionate about apples.",
   address: "Brüsenhagen 28, 16866 Gumtow",
   latitude: nil,
@@ -51,8 +51,8 @@ farmer1.sub_photos.attach(io: farm_photo4, filename: "farm_sub4", content_type: 
 farmer1.save!
 
 farmer_profile_2 = Farmer.new(
-  user: carsten,
-  title: "Behringhof sells fruit such as berries and apples",
+  user: charly,
+  title: "Enzweilers Farm",
   description_profile: "A farmer.",
   description_farm: "A farmer in Brandenburg, passionate about berries andapples.",
   address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland",
