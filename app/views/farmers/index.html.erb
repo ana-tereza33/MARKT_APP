@@ -13,21 +13,19 @@
             <% end %>
 
             <div class="card-farmer-content">
-              <h2><%= link_to farmer.name, farmer_path(farmer), class: "text-decoration-none text-success" %></h2>
-              <p class="mb-3"><%= farmer.description_profile %></p>
-
+              <div class="text-center mb-1">
+                <h2 class="title-farmer mb-0"><%= link_to "Farmer #{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none font-enlarge text-dark-green" %></h2>
+              </div>
               <div class="card-farmer-details">
-                <p class="user"><i class="fas fa-user"></i> <%= farmer.user.name %></p>
-                <p class="title"><i class="fas fa-tag"></i> <%= farmer.title %></p>
-                <p class="description-profile"><i class="fas fa-info-circle"></i> <%= farmer.description_profile %></p>
-                <p class="address"><i class="fas fa-map-marker-alt"></i> <%= farmer.address %></p>
+                <p class="mb-2"><strong><%= farmer.title %></strong></p>
+                <p class="mb-2"><i class="fa-solid fa-seedling"></i> <%= farmer.description_profile %></p>
+                <p><i class="fas fa-map-marker-alt"></i> <%= farmer.address %></p>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     <% end %>
-
   </div>
 
   <br />
