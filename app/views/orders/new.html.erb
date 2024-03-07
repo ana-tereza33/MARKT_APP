@@ -1,0 +1,13 @@
+<h1>Checkout</h1>
+
+<% @basket.basket_products.each do |basket_product| %>
+  <% product = Product.find(basket_product.product_id) %>
+  <ul>
+    <li><%= product.name %><%= basket_product.amount %></li>
+  </ul>
+<% end %>
+<p><%= @amount.round(2) %>$</p>
+<%= simple_form_for [@basket, @order] do |f| %>
+<%= f.input :total, as: :hidden, input_html: {value: "#{@amount.round(2)}"}%>
+<%= f.submit "Checkout", id: "booking-button" %>
+<% end %>
