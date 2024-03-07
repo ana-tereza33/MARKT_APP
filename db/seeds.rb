@@ -221,7 +221,7 @@ puts "#{Farmer.count} Farmers created 🥕 🥕 🥕"
 product1 = Product.new(
   name: "Carrot",
   farmer: farmer2,
-  price: "1,20 €",
+  price: 1.20,
   quantity: "30",
   description: "organic, heirloom carrots",
 )
@@ -233,7 +233,7 @@ product1.save!
 product2 = Product.new(
   name: "Broccoli",
   farmer: farmer2,
-  price: "1,20 €",
+  price: 1.60,
   quantity: "30",
   description: "organic, heirloom broccolis",
 )
@@ -245,7 +245,7 @@ product2.save!
 product3 = Product.new(
   name: "Potato",
   farmer: farmer2,
-  price: "1,20 €",
+  price: 0.30,
   quantity: "30",
   description: "organic, heirloom potatos",
 )
@@ -257,7 +257,7 @@ product3.save!
 product4 = Product.new(
   name: "Red onions",
   farmer: farmer2,
-  price: "1,20 €",
+  price: 0.10,
   quantity: "30",
   description: "organic, heirloom onions",
 )

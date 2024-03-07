@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   # validates :address, presence: true
   has_one :farmer, dependent: :destroy
+  has_one :basket, dependent: :destroy
 end
