@@ -1,32 +1,45 @@
-// Specific CSS for your home-page
 .homepage-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .homepage-heading {
-    color: darkgreen;
-    margin-bottom: 20px;
-  }
-  
-  .image-container {
-    margin-bottom: 30px;
-  }
-  
-  .form-container {
-    margin-top: 30px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-label {
-    background-color: lightgrey;
-    padding: 5px 10px;
-  }
-  
-  .form-control {
-    width: 200px; /* oder entsprechend Ihrer Präferenz */
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage-heading {
+  color: darkgreen;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  margin-bottom: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  height: 38px; 
+  line-height: 38px; 
+  text-align: center; 
+}
+
+.btn-primary {
+  width: 100%;
+  max-width: 300px;
+  background-color: darkgreen;
+  border-color: darkgreen;
+}
+
+.btn-primary:hover {
+  background-color: darkgreen;
+}
