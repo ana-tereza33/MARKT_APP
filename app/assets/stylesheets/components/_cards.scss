@@ -8,10 +8,10 @@
 }
 
 .card-farmer-img {
-  height: 200px;
+  height: 140px;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   margin-bottom: 10px;
 }
 
@@ -50,8 +50,19 @@
   color: #333;
 }
 
-.card-farmer-details .user a,
-.title-farmer a {
+.product-card {
+  width: 48%;
+  border-radius: 15px;
+}
+
+.card-product-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+  
+ .card-farmer-details .user a, .title-farmer a {
   color: #006400;
 }
 
