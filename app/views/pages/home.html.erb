@@ -1,5 +1,7 @@
 <div class="homepage-container">
-  <h1 class="homepage-heading">Connect with farmers. Buy locally. Be sustainable.</h1>
+  <h1 class="homepage-heading">Connect with farmers.</h1>
+  <h1 class="homepage-heading">Buy locally.</h1>
+  <h1 class="homepage-heading">Be sustainable.</h1>
   
   <!-- Bild -->
   <div class="image-container">
@@ -9,11 +11,10 @@
   <!-- Formular -->
   <div class="form-container">
     <%= form_tag("/search", method: "get") do %>
-      <div class="form-group">
-        <%= label_tag(:postcode, "Postcode:", class: "form-label") %>
-        <%= text_field_tag(:postcode, nil, class: "form-control") %>
-      </div>
-      <%= submit_tag("Search", class: "btn btn-primary") %>
+      <%= text_field_tag(:postcode, nil, placeholder: "Postcode:", class: "form-control") %>
+      <%= submit_tag("Search", class: "btn btn-primary btn-block") %>
     <% end %>
   </div>
 </div>
+
+    

@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(218, 232, 209);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +10,27 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 38px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+.fa-solid.fa-bars {
+font-size: 32px;
+color: rgb(40, 83, 39);
+opacity: 0.81;
+}
+
+.nav-link {
+  font-family: 'Karantina', sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+  color: rgb(40, 83, 39);
+  opacity: 0.81;
+}
+
+.navbar-brand {
+  margin-right:0px;
 }

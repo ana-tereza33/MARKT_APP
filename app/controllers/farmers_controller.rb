@@ -25,7 +25,7 @@ class FarmersController < ApplicationController
     @farmer = Farmer.new(farmer_params)
     @farmer.user = current_user
     @farmer.save!
-    redirect_to farmer_path(@farmer)
+    redirect_to root_path
   end
 
   def edit
@@ -39,7 +39,16 @@ class FarmersController < ApplicationController
 
   private
 
+  # def farmer_params
+  #   params.require(:farmer).permit(:name, :description, :address)
+  # end
+
   def farmer_params
-    params.require(:farmer).permit(:name, :description, :address)
+    params.require(:farmer).permit(
+      :name, :address, :latitude, :longitude,
+      :description_profile, :description_farm,
+      :main_photo, sub_photos: []
+    )
   end
+
 end
