@@ -124,4 +124,4 @@ product4.product_photo.attach(io: product_photo4, filename: "product4_photo", co
 
 product4.save!
 
-puts "#{Product.count} Product created 🍎 🍎 🍎"
+puts "#{Product.count} Products created 🍎 🍎 🍎"
