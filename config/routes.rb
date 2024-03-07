@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'baskets/add'
+  # get 'baskets/basket'
+  get "basket", to: "baskets#basket"
+  get "basket/:id", to: "baskets#add"
+
   # get 'chats/show'
   resources :chats, only: [:show]
 
