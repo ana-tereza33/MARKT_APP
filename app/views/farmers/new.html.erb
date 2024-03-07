@@ -1,14 +1,16 @@
-<div class="container">
-  <h1>New Farmer</h1>
-  <%= simple_form_for(@farmer) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :description_profile, label: 'Profile Description' %>
-    <%= f.input :description_farm, label: 'Farm Description' %>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h1>Create your farmer profile</h1>
+    <%= simple_form_for(@farmer) do |f| %>
+    <%= f.input :description_profile, label: 'Describe your farm in one sentence' %>
+    <%= f.input :description_farm, label: 'Give a long description for your profile' %>
     <%= f.input :latitude %>
     <%= f.input :longitude %>
     <%= f.file_field :main_photo %>
+    <p></p>
     <%= f.file_field :sub_photos, input_html: { multiple: true } %>
+    <p></p>
     <%= f.submit "Create", id: "booking-button" %>
-  <% end %>
+    <% end %>
+  </div>
 </div>
