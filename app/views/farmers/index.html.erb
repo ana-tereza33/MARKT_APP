@@ -14,7 +14,7 @@
 
             <div class="card-farmer-content">
               <div class="text-center mb-1">
-                <h2 class="title-farmer mb-0"><%= link_to "Farmer #{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none font-enlarge text-dark-green" %></h2>
+                <h2 class="title-farmer mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none font-enlarge text-dark-green" %></h2>
               </div>
               <div class="card-farmer-details">
                 <p class="mb-2"><strong><%= farmer.title %></strong></p>
