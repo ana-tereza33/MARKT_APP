@@ -18,7 +18,7 @@ class FarmersController < ApplicationController
     @farmer = Farmer.new(farmer_params)
     @farmer.user = current_user
     @farmer.save!
-    redirect_to farmer_path(@farmer)
+    redirect_to root_path
   end
 
   def edit

@@ -1,9 +1,14 @@
 <div class="container">
-<h1>New Farmer</h1>
+  <h1>New Farmer</h1>
   <%= simple_form_for(@farmer) do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
-    <%= f.input :description %>
+    <%= f.input :description_profile, label: 'Profile Description' %>
+    <%= f.input :description_farm, label: 'Farm Description' %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+    <%= f.file_field :main_photo %>
+    <%= f.file_field :sub_photos, input_html: { multiple: true } %>
     <%= f.submit "Create", id: "booking-button" %>
   <% end %>
 </div>
