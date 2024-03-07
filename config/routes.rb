@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  get "dashboard", to: "pages#dashboard"
+
+  # get 'products/create'
+  resources :products, only: [:create]
+
   # get 'baskets/add'
   # get 'baskets/basket'
-  get "basket", to: "baskets#basket"
-  get "basket/:id", to: "baskets#add"
+  # get 'orders/new'
+  # get 'orders/create'
+
+  resources :baskets, only: [:new, :update] do
+    resources :orders, only: [:new, :create]
+  end
 
   # get 'chats/show'
   resources :chats, only: [:show]
