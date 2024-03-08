@@ -11,27 +11,30 @@
       <% end %>
     </div>
   </div>
+  <% if current_user %>
+    <form action="/baskets/<%= @basket.id %>" method="patch">
+      <div class="d-flex justify-content-between" style="flex-wrap: wrap;">
+        <% @farmer.products.each do |product| %>
+              <div class="card-farmer border p-3 position-relative product-card">
+                <% if product.product_photo.present? %>
+                  <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img" %>
+                <% end %>
 
-  <form action="/baskets/<%= @basket.id %>" method="patch">
-    <div class="d-flex justify-content-between" style="flex-wrap: wrap;">
-      <% @farmer.products.each do |product| %>
-            <div class="card-farmer border p-3 position-relative product-card">
-              <% if product.product_photo.present? %>
-                <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img" %>
-              <% end %>
+                <div class="card-farmer-content">
 
-              <div class="card-farmer-content">
-
-                <div class="card-farmer-details">
-                  <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
-                <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
-                <input type="number" name="basket_product[][amount]" class="" value="0">
+                  <div class="card-farmer-details">
+                    <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                  <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
+                  <input type="number" name="basket_product[][amount]" class="" value="0">
+                  </div>
                 </div>
               </div>
-            </div>
-      <% end %>
-      <input type="submit" value="Add to Basket">
-    </div>
-  </form>
+        <% end %>
+        <input type="submit" value="Add to Basket" class="btn btn-primary btn-block">
+      </div>
+    </form>
+  <% else %>
+    <p>Log in to purchase items</p>
+  <% end %>
   <br />
 </div>

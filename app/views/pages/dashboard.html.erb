@@ -1,5 +1,28 @@
-<h1>Orders</h1>
-
-<% @orders.each do |order|%>
-  <p><%= order.total %>$</p>
-<% end %>
+<div class="container" id="dashboard-farmer">
+  <% amount = 0 %>
+  <div class="text-center">
+    <h1><strong>Your Orders</strong></h1>
+    <h1>These are your orderd items</h1>
+  </div>
+  <% @orders.each_with_index do |order, index| %>
+    <div class="green-box">
+      <h2>Order #<%= index + 1 %></h2>
+      <% order.order_products.each do |order_product| %>
+        <div class="d-flex product-box mt-3">
+          <div style="margin-right: 20px;">
+             <%=  cl_image_tag(order_product.product.product_photo.key, width: 140, height:125, class: "product-image")%>
+          </div>
+          <div class="">
+            <p><%= order_product.product.name %></p>
+            <p>Quantity: <%= order_product.amount%></p>
+            <p>Price: <%= order_product.product.price %>$/per</p>
+          </div>
+        </div>
+        <% amount += order_product.product.price * order_product.amount %>
+      <% end %>
+      <div class="d-flex justify-content-center mt-4">
+        <h2>Total <%= amount.round(2) %>$</h2>
+      </div>
+    </div>
+  <% end %>
+</div>
