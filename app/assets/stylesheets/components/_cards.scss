@@ -2,8 +2,7 @@
   position: relative;
   overflow: hidden;
   background: rgba(40, 83, 39, 0.23);
-  // opacity: 0.23;
-  box-shadow: 0 0 15px #00000033;
+  outline: none;
   margin-bottom: 20px;
   border-radius: 15px;
 }
@@ -68,7 +67,7 @@
 }
 
 .text-dark-green {
-  color: #006400; /* Dunkelgrüne Farbe */
+  color: #006400;
 }
 
 .text-center {
@@ -78,3 +77,4 @@
 .card-farmer-details .mb-2 {
   margin-bottom: 5px;
 }
+

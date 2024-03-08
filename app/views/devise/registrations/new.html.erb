@@ -3,21 +3,20 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :name, required: true, autofocus: true, label: 'Name', input_html: {class: 'fillform'}%>
+      <%= f.input :name, required: true, autofocus: true, label: 'Name', input_html: {class: 'fillform'} %>
       <%= f.input :address, required: true, label: 'Address', input_html: {class: 'fillform'} %>
       <%= f.input :email, required: true, input_html: { autocomplete: "email" }, label: 'Email', input_html: {class: 'fillform'} %>
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" }, label: 'Password', input_html: {class: 'fillform'} %>
       <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" }, label: 'Confirm Password', input_html: {class: 'fillform'} %>
 
-      <div class="form-group mt-3">
+      <div class="form-group mt-3 mb-3">
         <%= f.label :is_farmer, 'Are you a farmer?', class: 'd-block mt-2' %>
         <%= f.collection_radio_buttons :is_farmer, [[true, 'Yes'], [false, 'No']], :first, :last, class: 'bob' %>
       </div>
     </div>
 
-    <div class="form-actions">
+    <div class="form-actions text-center">
       <%= f.button :submit, "Sign up", class: 'button' %>
     </div>
-    <%= render "devise/shared/links" %>
   <% end %>
 </div>

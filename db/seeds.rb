@@ -59,12 +59,12 @@ product_photo4 = URI.open("https://images.squarespace-cdn.com/content/v1/5de5df7
 # olivier = User.create(name: "Olivier", address: "Brandenburger Tor 1, Berlin", email: "olivier@email.com", password: "123456", is_farmer: true)
 # emma = User.create(name: "Emma", address: "Brandenburger Tor 1, Berlin", email: "emma@test.com", password: "123456", is_farmer: true)
 
-user1 = User.create(name: "Cem Bauer", address: "Musterstraße 1, Brandenburg", email: "cem@email.com", password: "123456", is_farmer: true)
-user2 = User.create(name: "Bauer Müller", address: "Beispielweg 42, Brandenburg", email: "mueller@email.com", password: "123456", is_farmer: true)
-user3 = User.create(name: "Hofladen Schneider", address: "Musterplatz 3, Brandenburg", email: "schneider@email.com", password: "123456", is_farmer: true)
-user4 = User.create(name: "Landwirt Krause", address: "Probenstraße 7, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
-user5 = User.create(name: "Bauer Weber", address: "Testweg 12, Brandenburg", email: "weber@email.com", password: "123456", is_farmer: true)
-user6 = User.create(name: "Feldmann Gärtnerei", address: "Musterweg 5, Brandenburg", email: "feldmann@email.com", password: "123456", is_farmer: true)
+user1 = User.create(name: "Cem Özdemir", address: "Musterstraße 1, Brandenburg", email: "cem@email.com", password: "123456", is_farmer: true)
+user2 = User.create(name: "Harald Müller", address: "Beispielweg 42, Brandenburg", email: "mueller@email.com", password: "123456", is_farmer: true)
+user3 = User.create(name: "Rudolf Schneider", address: "Musterplatz 3, Brandenburg", email: "schneider@email.com", password: "123456", is_farmer: true)
+user4 = User.create(name: "Dieter Krause", address: "Probenstraße 7, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
+user5 = User.create(name: "Peter Weber", address: "Testweg 12, Brandenburg", email: "weber@email.com", password: "123456", is_farmer: true)
+user6 = User.create(name: "Herman Feldmann", address: "Musterweg 5, Brandenburg", email: "feldmann@email.com", password: "123456", is_farmer: true)
 
 puts "#{User.count} Users created 🥳"
 
