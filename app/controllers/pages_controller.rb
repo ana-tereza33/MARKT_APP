@@ -8,3 +8,4 @@ class PagesController < ApplicationController
     redirect_to new_farmer_path if user_signed_in? && current_user.is_farmer? && current_user.farmer.nil?
   end
 end
+end
