@@ -1,6 +1,12 @@
-#fillform {
-  background-color: $green-fill-form;
-  color: $green-fill-form-text;
+.fillform {
+  background-color: #2853274b;
+  color: #285327!important;
   font-style: italic;
+  border: none!important;
+  box-shadow: none!important;
   // padding: ;
+  border-radius: 5px;
+  &:focus {
+  background-color: #2853274b;
+  }
 }

@@ -3,11 +3,11 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :name, required: true, autofocus: true, label: 'Name' %>
-      <%= f.input :address, required: true, label: 'Address' %>
-      <%= f.input :email, required: true, input_html: { autocomplete: "email" }, label: 'Email' %>
-      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" }, label: 'Password' %>
-      <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" }, label: 'Confirm Password' %>
+      <%= f.input :name, required: true, autofocus: true, label: 'Name', input_html: {class: 'fillform'}%>
+      <%= f.input :address, required: true, label: 'Address', input_html: {class: 'fillform'} %>
+      <%= f.input :email, required: true, input_html: { autocomplete: "email" }, label: 'Email', input_html: {class: 'fillform'} %>
+      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" }, label: 'Password', input_html: {class: 'fillform'} %>
+      <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" }, label: 'Confirm Password', input_html: {class: 'fillform'} %>
 
       <div class="form-group mt-3">
         <%= f.label :is_farmer, 'Are you a farmer?', class: 'd-block mt-2' %>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: 'btn btn-primary mt-4' %>
+      <%= f.button :submit, "Sign up", class: 'button' %>
     </div>
     <%= render "devise/shared/links" %>
   <% end %>
