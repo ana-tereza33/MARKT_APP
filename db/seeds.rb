@@ -129,9 +129,9 @@ farmer1.save!
 
 farmer2 = Farmer.new(
   user: user2,
-  title: "Enzweilers Farm",
+  title: "Müllers Farm",
   description_profile: "Diverse farm with berries and apples",
-  description_farm: "Enzweilers Farm is a diverse agricultural paradise located on Berliner Str. 23 b, Gemeinde Höhenland. Specializing in berries and apples, our farm is dedicated to providing organic, heirloom produce to our customers.",
+  description_farm: "Müllers Farm is a diverse agricultural paradise located on Berliner Str. 23 b, Gemeinde Höhenland. Specializing in berries and apples, our farm is dedicated to providing organic, heirloom produce to our customers.",
   address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland",
   latitude: nil,
   longitude: nil

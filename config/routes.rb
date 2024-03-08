@@ -24,6 +24,10 @@ Rails.application.routes.draw do
   # TODO Add Edit & Create to farmers!!!
 
   devise_for :users
+
+  # get '/contact', to: 'contact#new'
+  # post '/contact_submit', to: 'contact#submit', as: :contact_submit
+
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -33,4 +37,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
 end
