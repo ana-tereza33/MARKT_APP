@@ -15,7 +15,36 @@ body {
   background-color: $green-background;
   padding-left: 30px;
   padding-right: 30px;
+
+  // color: $green-text;
+  // opacity: 0.81;
+  // font-size: ;
 }
+
+h1{
+  font-family: 'Inter', sans-serif;
+  color: $green-text;
+  opacity: 0.81;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2{
+  font-family: 'Inter', sans-serif;
+  color: $green-text;
+  opacity: 0.81;
+  font-size: 24px;
+  font-weight: medium;
+}
+
+p{
+  font-family: 'Inter', sans-serif;
+  color: $green-text;
+  opacity: 0.81;
+  font-size: 12px;
+  font-weight: medium;
+}
+
 
 span {
   margin-right: 25px;
