@@ -17,6 +17,7 @@
 }
 
 .title-farmer {
+  // farmer h1
   font-size: 17px;
   font-weight: bold;
   margin: 0 0 3px;
@@ -32,6 +33,7 @@
 }
 
 .card-farmer-details {
+  // h2 farmer title und desc and adress
   display: flex;
   flex-direction: column;
 }
@@ -78,3 +80,37 @@
 .card-farmer-details .mb-2 {
   margin-bottom: 5px;
 }
+
+
+
+// h1bfarmer{
+//   font-family: 'Inter', sans-serif;
+//   color: $green-text;
+//   opacity: 0.81;
+//   font-size: 15px;
+//   font-weight: bold;
+// }
+
+// h2 farm{
+//   font-family: 'Inter', sans-serif;
+//   color: $green-text;
+//   opacity: 0.65;
+//   font-size: 11px;
+//   font-weight: medium;
+// }
+
+// p desc{
+//   font-family: 'Inter', sans-serif;
+//   color: $green-text;
+//   opacity: 0.65;
+//   font-size: 11px;
+//   font-weight: regular;
+// }
+
+// p adress{
+//   //   font-family: 'Inter', sans-serif;
+//   //   color: $green-text;
+//   //   opacity: 0.65;
+//   //   font-size: 10px;
+//   //   font-weight: semi-bold;
+//   // }
