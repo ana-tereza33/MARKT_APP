@@ -2,19 +2,21 @@
   <h1 class="homepage-heading">Connect with farmers.</h1>
   <h1 class="homepage-heading">Buy locally.</h1>
   <h1 class="homepage-heading">Be sustainable.</h1>
-  
-  <!-- Bild -->
+
+<%# Bild %>
   <div class="image-container">
-    <%= image_tag("markt_basket.png", alt: "Market Basket") %>
+    <%= image_tag("markt_basket.png", alt: "Market Basket", style: "width: 300px;") %>
   </div>
 
-  <!-- Formular -->
+<%# Formular %>
   <div class="form-container">
     <%= form_tag("/search", method: "get") do %>
       <%= text_field_tag(:postcode, nil, placeholder: "Postcode:", class: "form-control") %>
-      <%= submit_tag("Search", class: "btn btn-primary btn-block") %>
     <% end %>
+    <%= link_to farmers_path, class: "dropdown-item" do %>
+      <button class="btn btn-primary btn-block">
+        Search
+      </button>
+    <% end%>
   </div>
 </div>
-
-    
