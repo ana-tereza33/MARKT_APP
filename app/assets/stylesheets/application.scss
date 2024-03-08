@@ -12,9 +12,10 @@
 @import "pages/index";
 
 body {
-  background-color: rgb(218, 232, 209);
+  background-color: $green-background;
   padding-left: 30px;
   padding-right: 30px;
+}
 
 span {
   margin-right: 25px;
