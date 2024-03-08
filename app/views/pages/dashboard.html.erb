@@ -2,7 +2,7 @@
   <% amount = 0 %>
   <div class="text-center">
     <h1><strong>Your Orders</strong></h1>
-    <h1>These are your orderd items</h1>
+    <h3>These are your orderd items</h3>
   </div>
   <% @orders.each_with_index do |order, index| %>
     <div class="green-box">
@@ -15,7 +15,7 @@
           <div class="">
             <p><%= order_product.product.name %></p>
             <p>Quantity: <%= order_product.amount%></p>
-            <p>Price: <%= order_product.product.price %>$/per</p>
+            <p>Price: <%= order_product.product.price %>€/per</p>
           </div>
         </div>
         <% amount += order_product.product.price * order_product.amount %>
