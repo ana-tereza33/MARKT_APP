@@ -1,6 +1,8 @@
 require "open-uri"
 
 puts "Cleaning Database 🧼"
+Order.destroy_all
+OrderProduct.destroy_all
 Product.destroy_all
 Farmer.destroy_all
 User.destroy_all

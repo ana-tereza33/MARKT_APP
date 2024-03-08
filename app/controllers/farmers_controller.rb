@@ -8,12 +8,14 @@ class FarmersController < ApplicationController
 
   def show
     @farmer = Farmer.find(params[:id])
-    if current_user.basket.nil?
-      @basket = Basket.new
-      @basket.user = current_user
-      @basket.save!
-    else
-      @basket = Basket.find(current_user.basket.id)
+    if current_user
+      if current_user.basket.nil?
+        @basket = Basket.new
+        @basket.user = current_user
+        @basket.save!
+      else
+        @basket = Basket.find(current_user.basket.id)
+      end
     end
   end
 
