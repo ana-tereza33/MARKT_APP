@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="products">
+        <% if @products.any? %>
+          <% @products.each do |product| %>
+            <h4><%= product.name %></h4>
+            <p><%= product.price %></p>
+            <p><%= product.quantity %></p>
+            <%# <img src="" alt="">
+            <><%= product.product_photo %>
+          <% end %>
+        <% else %>
+          <em>Sorry, no products found.</em>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
