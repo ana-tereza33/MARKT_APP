@@ -1,14 +1,40 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <div id="products">
+    <div class="col-12">
+      <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find your Product!"
+          %>
+          </div>
+          <div class="col-12">
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div id="products" class="d-flex justify-content-between" style="flex-wrap: wrap;">
         <% if @products.any? %>
           <% @products.each do |product| %>
-            <h4><%= product.name %></h4>
-            <p><%= product.price %></p>
-            <p><%= product.quantity %></p>
+          <div class="card-farmer border p-3 position-relative product-card" style="margin-top: 20px;">
+
+              <%# <div class="card-farmer border p-3 position-relative product-card"> %>
+                <% if product.product_photo.present? %>
+                  <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img" %>
+                <% end %>
+
+                <div class="card-farmer-content">
+                  <div class="card-farmer-details">
+                    <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                  </div>
+                </div>
             <%# <img src="" alt="">
             <><%= product.product_photo %>
+          </div>
+
           <% end %>
         <% else %>
           <em>Sorry, no products found.</em>
