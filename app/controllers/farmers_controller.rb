@@ -1,13 +1,21 @@
 class FarmersController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @farmers = Farmer.all
+    # @markers = @farmers.geocoded.map do |farmer|
+    #   {
+    #     lat: farmer.latitude,
+    #     lng: farmer.longitude,
+    #     info_window_html: render_to_string(partial: "info_window", locals: { farmer: farmer })
+    #   }
+    # end
   end
 
   def show
     @farmer = Farmer.find(params[:id])
+    @geolocation_hash = geolocation_hash(@farmer)
+
     if current_user
       if current_user.basket.nil?
         @basket = Basket.new
@@ -40,6 +48,15 @@ class FarmersController < ApplicationController
   end
 
   private
+
+  def geolocation_hash(farmer)
+    {
+      lat: farmer.latitude,
+      lng: farmer.longitude
+      # If you want a costum marker do it here 👇🏻
+      # marker_html: render_to_string(partial: "marker", locals: { farmer: farmer })
+    }
+  end
 
   def farmer_params
     params.require(:farmer).permit(
