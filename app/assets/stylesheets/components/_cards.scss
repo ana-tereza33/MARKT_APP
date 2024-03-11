@@ -15,6 +15,9 @@
   margin-bottom: 10px;
 }
 
+
+//farmer cards
+
 .title-farmer {
   // farmer h1
   font-size: 17px;
@@ -45,12 +48,20 @@
   margin-right: 5px;
 }
 
-.card-farmer-details .title,
-.card-farmer-details .description-profile,
+.card-farmer-details .title{
+  font-size: 12px;
+  color: #333;
+}
+.card-farmer-details .description-profile{
+  font-size: 12px;
+  color: #333;
+}
 .card-farmer-details .address {
   font-size: 12px;
   color: #333;
 }
+
+// product cards
 
 .product-card {
   width: 48%;
@@ -64,7 +75,7 @@
   border-radius: 15px;
 }
 
- .card-farmer-details .user a, .title-farmer a {
+.card-farmer-details .user a, .title-farmer a {
   color: #006400;
 }
 
