@@ -8,6 +8,7 @@ class Farmer < ApplicationRecord
 
   has_many :products, dependent: :destroy
   validates :description_farm, presence: true
+
   validates :latitude, presence: true
   validates :longitude, presence: true
 
@@ -21,4 +22,8 @@ class Farmer < ApplicationRecord
       end
     end
   end
+
+  # validates :latitude, presence: true
+  # validates :longitude, presence: true
+
 end

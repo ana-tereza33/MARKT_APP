@@ -36,10 +36,9 @@
               <% else %>
                 <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <% end %>
-              <%= link_to "Search", '#', class: "dropdown-item" %>
+              <%= link_to "Search", search_path, class: "dropdown-item" %>
               <%= link_to "Farmers", farmers_path, class: "dropdown-item" %>
               <%= link_to "My orders", dashboard_path, class: "dropdown-item" %>
-              <%= link_to "Contact", '#', class: "dropdown-item" %>
             </div>
           </li>
         <%# else %>

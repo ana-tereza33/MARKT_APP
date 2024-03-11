@@ -11,11 +11,9 @@ class PagesController < ApplicationController
 
   def search
     @products = Product.all
-    # if params[:query].present?
-    #   @products = @products.where(name: params[:query])
-    # end
+
     if params[:query].present?
-      @movies = @movies.where("name ILIKE ?", "%#{params[:query]}%")
+      @products = @products.where("name ILIKE ?", "%#{params[:query]}%")
     end
   end
 end
