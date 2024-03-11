@@ -41,10 +41,6 @@ class FarmersController < ApplicationController
 
   private
 
-  # def farmer_params
-  #   params.require(:farmer).permit(:name, :description, :address)
-  # end
-
   def farmer_params
     params.require(:farmer).permit(
       :name, :address, :latitude, :longitude,
@@ -52,5 +48,4 @@ class FarmersController < ApplicationController
       :main_photo, sub_photos: []
     )
   end
-
 end

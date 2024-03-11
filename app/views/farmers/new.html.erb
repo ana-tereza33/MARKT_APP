@@ -4,8 +4,7 @@
     <%= simple_form_for(@farmer) do |f| %>
     <%= f.input :description_profile, label: 'Describe your farm in one sentence' %>
     <%= f.input :description_farm, label: 'Give a long description for your profile' %>
-    <%= f.input :latitude %>
-    <%= f.input :longitude %>
+    <%= f.input :address %>
     <%= f.file_field :main_photo %>
     <p></p>
     <%= f.file_field :sub_photos, input_html: { multiple: true } %>

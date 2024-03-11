@@ -1,8 +1,9 @@
 require "open-uri"
 
 puts "Cleaning Database 🧼"
-Order.destroy_all
 OrderProduct.destroy_all
+Basket.destroy_all
+Order.destroy_all
 Product.destroy_all
 Farmer.destroy_all
 User.destroy_all
@@ -75,9 +76,7 @@ puts "#{User.count} Users created 🥳"
 #   title: "Barros Farm",
 #   description_profile: "An apple farm",
 #   description_farm: "A farmer in Brandenburg, passionate about apples.",
-#   address: "Brüsenhagen 28, 16866 Gumtow",
-#   latitude: nil,
-#   longitude: nil
+#   address: "Brüsenhagen 28, 16866 Gumtow"
 # )
 
 # farmer1.main_photo.attach(io: profile_photo1, filename: "farmer1_profile", content_type: "image/jpg")
@@ -93,9 +92,7 @@ puts "#{User.count} Users created 🥳"
 #   title: "Enzweilers Farm",
 #   description_profile: "A farmer.",
 #   description_farm: "A farmer in Brandenburg, passionate about berries andapples.",
-#   address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland",
-#   latitude: nil,
-#   longitude: nil
+#   address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland"
 # )
 
 # farmer_profile_2.main_photo.attach(io: profile_photo2, filename: "farmer1_profile", content_type: "image/jpg")
@@ -113,9 +110,7 @@ farmer1 = Farmer.new(
   title: "Barros Farm",
   description_profile: "Family-run apple orchard",
   description_farm: "Barros Farm is a family-run apple orchard nestled in the picturesque village of Brüsenhagen. With a passion for cultivating high-quality apples, we take pride in offering fresh and delicious fruits to our community.",
-  address: "Brüsenhagen 28, 16866 Gumtow",
-  latitude: nil,
-  longitude: nil
+  address: "Brüsenhagen 28, 16866 Gumtow"
 )
 
 farmer1.main_photo.attach(io: profile_photo1, filename: "farmer1_profile", content_type: "image/jpg")
@@ -132,9 +127,7 @@ farmer2 = Farmer.new(
   title: "Müllers Farm",
   description_profile: "Diverse farm with berries and apples",
   description_farm: "Müllers Farm is a diverse agricultural paradise located on Berliner Str. 23 b, Gemeinde Höhenland. Specializing in berries and apples, our farm is dedicated to providing organic, heirloom produce to our customers.",
-  address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland",
-  latitude: nil,
-  longitude: nil
+  address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland"
 )
 
 farmer2.main_photo.attach(io: profile_photo2, filename: "farmer1_profile", content_type: "image/jpg")
@@ -151,9 +144,7 @@ farmer3 = Farmer.new(
   title: "Schneider's Farm Market",
   description_profile: "Local farm market with a variety of fresh produce",
   description_farm: "Schneider's Farm Market is a go-to destination for fresh, locally grown produce. Located at Musterplatz 3, Brandenburg, we offer a wide range of fruits and vegetables, ensuring our customers enjoy the best of our harvest.",
-  address: "Musterplatz 3, Brandenburg",
-  latitude: nil,
-  longitude: nil
+  address: "Musterplatz 3, Brandenburg"
 )
 
 farmer3.main_photo.attach(io: profile_photo3, filename: "farmer3_profile", content_type: "image/jpg")
@@ -169,9 +160,7 @@ farmer4 = Farmer.new(
   title: "Krause Organic Fields",
   description_profile: "Organic farming with a focus on sustainable practices",
   description_farm: "Krause Organic Fields, situated at Probenstraße 7, Brandenburg, is committed to organic farming and sustainable practices. Our fields produce organic, heirloom potatoes and other vegetables, ensuring a healthier and greener environment.",
-  address: "Probenstraße 7, Brandenburg",
-  latitude: nil,
-  longitude: nil
+  address: "Probenstraße 7, Brandenburg"
 )
 
 farmer4.main_photo.attach(io: profile_photo4, filename: "farmer4_profile", content_type: "image/jpg")
@@ -187,9 +176,7 @@ farmer5 = Farmer.new(
   title: "Weber's Family Farm",
   description_profile: "Family-operated farm with a love for agriculture",
   description_farm: "Weber's Family Farm, located at Testweg 12, Brandenburg, is a family-operated farm dedicated to providing fresh and wholesome produce. Our commitment to sustainable farming practices ensures that our customers receive the best quality onions and other vegetables.",
-  address: "Testweg 12, Brandenburg",
-  latitude: nil,
-  longitude: nil
+  address: "Testweg 12, Brandenburg"
 )
 
 farmer5.main_photo.attach(io: profile_photo5, filename: "farmer5_profile", content_type: "image/jpg")
@@ -205,9 +192,7 @@ farmer6 = Farmer.new(
   title: "Feldmann Gärtnerei",
   description_profile: "Garden center with a passion for plants",
   description_farm: "Feldmann Gärtnerei, situated at Musterweg 5, Brandenburg, is a garden center with a passion for plants. Our diverse range of products includes beautiful flowers and plants, and our knowledgeable staff is dedicated to helping customers create stunning gardens.",
-  address: "Musterweg 5, Brandenburg",
-  latitude: nil,
-  longitude: nil
+  address: "Musterweg 5, Brandenburg"
 )
 
 farmer6.main_photo.attach(io: profile_photo6, filename: "farmer6_profile", content_type: "image/jpg")
