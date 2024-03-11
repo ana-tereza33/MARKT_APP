@@ -8,7 +8,6 @@ Product.destroy_all
 Farmer.destroy_all
 User.destroy_all
 
-
 puts "Creating Farmers 👩🏼‍🌾 👨🏽‍🌾 👩🏼‍🌾 👨🏽‍🌾"
 
 profile_photo1 = URI.open("https://p6.focus.de/img/fotos/id_259576981/oezdemir-kopie.jpg?im=Resize%3D%28800%2C450%29&impolicy=perceptual&quality=mediumHigh&hash=6dfac9a95898c860ae4fcdf7a6963cb8911587b26cecae894495ce6ca6c421ff")
@@ -47,7 +46,6 @@ farm_photo22 = URI.open("https://gardenorganic-assets.s3.eu-west-2.amazonaws.com
 farm_photo23 = URI.open("https://static.vecteezy.com/system/resources/previews/027/146/201/large_2x/organic-farming-cutting-with-pruner-and-putting-vegetable-crop-in-basket-organic-vegetables-harvest-ai-generated-photo.jpg")
 farm_photo24 = URI.open("https://completelandscaping.com/wp-content/uploads/apple-trees.jpeg")
 
-
 #product
 
 product_photo1 = URI.open("https://cdn11.bigcommerce.com/s-a9b4a/images/stencil/1280x1280/products/1196/6690/Little-Fingers-and-Organic-Little-Fingers-Carrots__69944.1666917020.jpg?c=2")
@@ -55,62 +53,25 @@ product_photo2 = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9G
 product_photo3 = URI.open("https://www.yorktest.com/wp-content/uploads/2021/12/AdobeStock_275778955-1024x683.jpeg")
 product_photo4 = URI.open("https://images.squarespace-cdn.com/content/v1/5de5df7f9f40c13aa6a8b579/1599183475729-668O0RQG0N41AIHKWEXU/intro-1597860204.jpg")
 
-# ana = User.create(name: "Ana", address: "Kochstraße 26, Berlin", email: "ana@email.com", password: "123456", is_farmer: true)
-# carl = User.create(name: "Carl", address: "Alexanderplatz 5, Berlin", email: "carl@email.com", password: "123456", is_farmer: false)
-# charly = User.create(name: "Charly", address: "Hermanstraße 22, Berlin", email: "charly@email.com", password: "123456", is_farmer: false)
-# carsten = User.create(name: "Carsten", address: "Brandenburger Tor 1, Berlin", email: "carsten@email.com", password: "123456", is_farmer: true)
-# olivier = User.create(name: "Olivier", address: "Brandenburger Tor 1, Berlin", email: "olivier@email.com", password: "123456", is_farmer: true)
-# emma = User.create(name: "Emma", address: "Brandenburger Tor 1, Berlin", email: "emma@test.com", password: "123456", is_farmer: true)
+#user
 
-user1 = User.create(name: "Cem Özdemir", address: "Musterstraße 1, Brandenburg", email: "cem@email.com", password: "123456", is_farmer: true)
-user2 = User.create(name: "Harald Müller", address: "Beispielweg 42, Brandenburg", email: "mueller@email.com", password: "123456", is_farmer: true)
-user3 = User.create(name: "Rudolf Schneider", address: "Musterplatz 3, Brandenburg", email: "schneider@email.com", password: "123456", is_farmer: true)
-user4 = User.create(name: "Dieter Krause", address: "Probenstraße 7, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
-user5 = User.create(name: "Peter Weber", address: "Testweg 12, Brandenburg", email: "weber@email.com", password: "123456", is_farmer: true)
-user6 = User.create(name: "Herman Feldmann", address: "Musterweg 5, Brandenburg", email: "feldmann@email.com", password: "123456", is_farmer: true)
+user1 = User.create(name: "Cem Özdemir", address: "Am Alten Markt 9, Potsdam, Brandenburg", email: "cem@email.com", password: "123456", is_farmer: true)
+user2 = User.create(name: "Harald Müller", address: "Brandenburger Str. 28, Brandenburg an der Havel, Brandenburg", email: "mueller@email.com", password: "123456", is_farmer: true)
+user3 = User.create(name: "Rudolf Schneider", address: "Berliner Str. 28, Frankfurt (Oder), Brandenburg", email: "schneider@email.com", password: "123456", is_farmer: true)
+user4 = User.create(name: "Dieter Krause", address: "Spremberger Str. 1, Cottbus, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
+user5 = User.create(name: "Peter Weber", address: "Bernauer Str. 65, Oranienburg, Brandenburg", email: "weber@email.com", password: "123456", is_farmer: true)
+user6 = User.create(name: "Herman Feldmann", address: "Bürgermeister-Franz-Str. 16, Brandenburg an der Havel, Brandenburg", email: "feldmann@email.com", password: "123456", is_farmer: true)
 
 puts "#{User.count} Users created 🥳"
-
-# farmer1 = Farmer.new(
-#   user: ana,
-#   title: "Barros Farm",
-#   description_profile: "An apple farm",
-#   description_farm: "A farmer in Brandenburg, passionate about apples.",
-#   address: "Brüsenhagen 28, 16866 Gumtow"
-# )
-
-# farmer1.main_photo.attach(io: profile_photo1, filename: "farmer1_profile", content_type: "image/jpg")
-# farmer1.sub_photos.attach(io: farm_photo1, filename: "farm_sub1", content_type: "image/jpg")
-# farmer1.sub_photos.attach(io: farm_photo2, filename: "farm_sub2", content_type: "image/jpg")
-# farmer1.sub_photos.attach(io: farm_photo3, filename: "farm_sub3", content_type: "image/jpg")
-# farmer1.sub_photos.attach(io: farm_photo4, filename: "farm_sub4", content_type: "image/jpg")
-
-# farmer1.save!
-
-# farmer_profile_2 = Farmer.new(
-#   user: charly,
-#   title: "Enzweilers Farm",
-#   description_profile: "A farmer.",
-#   description_farm: "A farmer in Brandenburg, passionate about berries andapples.",
-#   address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland"
-# )
-
-# farmer_profile_2.main_photo.attach(io: profile_photo2, filename: "farmer1_profile", content_type: "image/jpg")
-# farmer_profile_2.sub_photos.attach(io: farm_photo5, filename: "farm_sub1", content_type: "image/jpg")
-# farmer_profile_2.sub_photos.attach(io: farm_photo6, filename: "farm_sub2", content_type: "image/jpg")
-# farmer_profile_2.sub_photos.attach(io: farm_photo7, filename: "farm_sub3", content_type: "image/jpg")
-# farmer_profile_2.sub_photos.attach(io: farm_photo8, filename: "farm_sub4", content_type: "image/jpg")
-
-
-# farmer_profile_2.save!
-
 
 farmer1 = Farmer.new(
   user: user1,
   title: "Barros Farm",
   description_profile: "Family-run apple orchard",
   description_farm: "Barros Farm is a family-run apple orchard nestled in the picturesque village of Brüsenhagen. With a passion for cultivating high-quality apples, we take pride in offering fresh and delicious fruits to our community.",
-  address: "Brüsenhagen 28, 16866 Gumtow"
+  address: "Am Alten Markt 9, Potsdam, Brandenburg",
+  latitude: 52.397554,
+  longitude: 13.054044
 )
 
 farmer1.main_photo.attach(io: profile_photo1, filename: "farmer1_profile", content_type: "image/jpg")
@@ -121,13 +82,14 @@ farmer1.sub_photos.attach(io: farm_photo4, filename: "farm_sub4", content_type: 
 
 farmer1.save!
 
-
 farmer2 = Farmer.new(
   user: user2,
   title: "Müllers Farm",
   description_profile: "Diverse farm with berries and apples",
   description_farm: "Müllers Farm is a diverse agricultural paradise located on Berliner Str. 23 b, Gemeinde Höhenland. Specializing in berries and apples, our farm is dedicated to providing organic, heirloom produce to our customers.",
-  address: "Berliner Str. 23 b, 16259 Gemeinde Höhenland"
+  address: "Brandenburger Str. 28, Brandenburg an der Havel, Brandenburg",
+  latitude: 52.423983,
+  longitude: 12.552806
 )
 
 farmer2.main_photo.attach(io: profile_photo2, filename: "farmer1_profile", content_type: "image/jpg")
@@ -144,7 +106,9 @@ farmer3 = Farmer.new(
   title: "Schneider's Farm Market",
   description_profile: "Local farm market with a variety of fresh produce",
   description_farm: "Schneider's Farm Market is a go-to destination for fresh, locally grown produce. Located at Musterplatz 3, Brandenburg, we offer a wide range of fruits and vegetables, ensuring our customers enjoy the best of our harvest.",
-  address: "Musterplatz 3, Brandenburg"
+  address: "Berliner Str. 28, Frankfurt (Oder), Brandenburg",
+  latitude: 52.345542,
+  longitude: 14.550849
 )
 
 farmer3.main_photo.attach(io: profile_photo3, filename: "farmer3_profile", content_type: "image/jpg")
@@ -160,7 +124,9 @@ farmer4 = Farmer.new(
   title: "Krause Organic Fields",
   description_profile: "Organic farming with a focus on sustainable practices",
   description_farm: "Krause Organic Fields, situated at Probenstraße 7, Brandenburg, is committed to organic farming and sustainable practices. Our fields produce organic, heirloom potatoes and other vegetables, ensuring a healthier and greener environment.",
-  address: "Probenstraße 7, Brandenburg"
+  address: "Spremberger Str. 1, Cottbus, Brandenburg",
+  latitude: 51.756205,
+  longitude: 14.334772
 )
 
 farmer4.main_photo.attach(io: profile_photo4, filename: "farmer4_profile", content_type: "image/jpg")
@@ -176,7 +142,9 @@ farmer5 = Farmer.new(
   title: "Weber's Family Farm",
   description_profile: "Family-operated farm with a love for agriculture",
   description_farm: "Weber's Family Farm, located at Testweg 12, Brandenburg, is a family-operated farm dedicated to providing fresh and wholesome produce. Our commitment to sustainable farming practices ensures that our customers receive the best quality onions and other vegetables.",
-  address: "Testweg 12, Brandenburg"
+  address: "Bernauer Str. 65, Oranienburg, Brandenburg",
+  latitude: 52.738958,
+  longitude: 13.236146
 )
 
 farmer5.main_photo.attach(io: profile_photo5, filename: "farmer5_profile", content_type: "image/jpg")
@@ -192,7 +160,9 @@ farmer6 = Farmer.new(
   title: "Feldmann Gärtnerei",
   description_profile: "Garden center with a passion for plants",
   description_farm: "Feldmann Gärtnerei, situated at Musterweg 5, Brandenburg, is a garden center with a passion for plants. Our diverse range of products includes beautiful flowers and plants, and our knowledgeable staff is dedicated to helping customers create stunning gardens.",
-  address: "Musterweg 5, Brandenburg"
+  address: "Bürgermeister-Franz-Str. 16, Brandenburg an der Havel, Brandenburg",
+  latitude: 52.422742,
+  longitude: 12.552777
 )
 
 farmer6.main_photo.attach(io: profile_photo6, filename: "farmer6_profile", content_type: "image/jpg")

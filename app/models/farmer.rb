@@ -8,8 +8,8 @@ class Farmer < ApplicationRecord
 
   has_many :products, dependent: :destroy
   validates :description_farm, presence: true
-  # validates :latitude, presence: true
-  # validates :longitude, presence: true
+  validates :latitude, presence: true
+  validates :longitude, presence: true
 
   def self.search(search)
     if search

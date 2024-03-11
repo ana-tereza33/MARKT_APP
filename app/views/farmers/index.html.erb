@@ -9,9 +9,10 @@
         <div class="col-md-6 card-garden-col">
           <div class="card-farmer border p-3 position-relative">
             <% if farmer.main_photo.present? %>
-              <%= cl_image_tag farmer.main_photo.key, alt: "#{farmer.name} Image", class: "card-farmer-img" %>
+              <%= cl_image_tag farmer.main_photo.key,  transformation: [{ gravity: "face"}], alt: "#{farmer.name} Image", class: "card-farmer-img" %>
+              <% else %>
+                <%= image_tag "nice_default_farmer.png", alt: "nice default farmer", class: "card-farmer-img" %>
             <% end %>
-
             <div class="card-farmer-content">
               <div class="text-center mb-1">
                 <h2 class="title-farmer mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none font-enlarge text-dark-green" %></h2>
