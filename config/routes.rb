@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'chatrooms/show'
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
   get "dashboard", to: "pages#dashboard"
 
   # get 'products/create'
