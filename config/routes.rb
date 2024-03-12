@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # get 'chatrooms/show'
+  root to: "farmers#index"
+  
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
@@ -33,7 +35,6 @@ Rails.application.routes.draw do
   # get '/contact', to: 'contact#new'
   # post '/contact_submit', to: 'contact#submit', as: :contact_submit
 
-  root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
