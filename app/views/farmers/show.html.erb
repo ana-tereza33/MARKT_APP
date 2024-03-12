@@ -1,37 +1,44 @@
-<div class="container text-center">
+<div class="container text-center mt-2">
   <h1 class="font-enlarge"><%= @farmer.user.name %></h1>
-  <br />
 
-  <div class="new-farmer-card">
-    <div class="main-photo">
-      <% if @farmer.main_photo.present? %>
-        <%= cl_image_tag @farmer.main_photo.key, alt: "#{@farmer.name} Image", class: "main-photo-img" %>
-      <% end %>
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <div class="main-photo">
+        <% if @farmer.main_photo.present? %>
+          <%= cl_image_tag @farmer.main_photo.key, alt: "#{@farmer.name} Image", class: "main-photo-img img-fluid" %>
+        <% end %>
+      </div>
     </div>
 
-    <div class="description-farm">
-      <p class="description-profile"><%= @farmer.description_farm %></p>
+    <div class="col-md-6 mb-2">
+      <div style="height: 150px;"
+           data-controller="map"
+           data-map-markers-value="<%= [@geolocation_hash].to_json %>"
+           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+  </div>
+
+  <div class="description-farm mb-2">
+    <p class="description-profile"><%= @farmer.description_farm %></p>
   </div>
 
   <% if current_user %>
     <form action="/baskets/<%= @basket.id %>" method="patch">
-      <div class="d-flex justify-content-between" style="flex-wrap: wrap;">
+      <div class="d-flex flex-wrap justify-content-around">
         <% @farmer.products.each do |product| %>
-              <div class="card-farmer border p-3 position-relative product-card">
-                <% if product.product_photo.present? %>
-                  <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img" %>
-                <% end %>
+          <div class="card-farmer border p-3 position-relative product-card mb-2">
+            <% if product.product_photo.present? %>
+              <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
+            <% end %>
 
-                <div class="card-farmer-content">
-
-                  <div class="card-farmer-details">
-                    <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
-                  <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
-                  <input type="number" name="basket_product[][amount]" class="" value="0">
-                  </div>
-                </div>
+            <div class="card-farmer-content">
+              <div class="card-farmer-details">
+                <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
+                <input type="number" name="basket_product[][amount]" class="" value="0">
               </div>
+            </div>
+          </div>
         <% end %>
         <input type="submit" value="Add to Basket" class="btn btn-primary btn-block">
       </div>

@@ -8,6 +8,22 @@ class Farmer < ApplicationRecord
 
   has_many :products, dependent: :destroy
   validates :description_farm, presence: true
+
+  validates :latitude, presence: true
+  validates :longitude, presence: true
+
+  def self.search(search)
+    if search
+      product_type = Product.find_by(name: search)
+      if product_type
+        self.where(product_id: product_type)
+      else
+        @products = Product.all
+      end
+    end
+  end
+
   # validates :latitude, presence: true
   # validates :longitude, presence: true
+
 end
