@@ -10,6 +10,8 @@ User.destroy_all
 
 puts "Creating Farmers 👩🏼‍🌾 👨🏽‍🌾 👩🏼‍🌾 👨🏽‍🌾"
 
+#farmers
+
 profile_photo1 = URI.open("https://p6.focus.de/img/fotos/id_259576981/oezdemir-kopie.jpg?im=Resize%3D%28800%2C450%29&impolicy=perceptual&quality=mediumHigh&hash=6dfac9a95898c860ae4fcdf7a6963cb8911587b26cecae894495ce6ca6c421ff")
 farm_photo1 = URI.open("https://i0.wp.com/forksinthedirt.com/wp-content/uploads/2019/08/IMG_20181004_120045479_HDR.jpg?resize=568%2C757&ssl=1")
 farm_photo2 = URI.open("https://www.kopos-projekt.de/sites/default/files/styles/gallery_preview/public/2023-03/20220725_Tiny%20Farms_Ernte_%C2%A9Carla%20Ulrich-4_0.jpg?itok=3gciXnIC")
@@ -99,7 +101,6 @@ farmer2.sub_photos.attach(io: farm_photo7, filename: "farm_sub3", content_type: 
 farmer2.sub_photos.attach(io: farm_photo8, filename: "farm_sub4", content_type: "image/jpg")
 
 farmer2.save!
-
 
 farmer3 = Farmer.new(
   user: user3,
