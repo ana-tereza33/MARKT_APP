@@ -41,7 +41,8 @@
 
 <% if current_user %>
     <form action="/baskets/<%= @basket.id %>" method="patch">
-      <div class="d-flex flex-wrap justify-content-around mb-4">
+
+      <div id="product-main" class="d-flex flex-wrap justify-content-around">
         <% @farmer.products.each do |product| %>
           <div class="card-farmer border p-3 position-relative product-card mb-2 mt-3">
             <% if product.product_photo.present? %>
@@ -58,9 +59,17 @@
           </div>
         <% end %>
       </div>
-      <input type="submit" value="Add to Basket" class="btn btn-primary fixed-bottom mx-auto mb-4">
+     <div id="product-footer" class="fixed-bottom d-flex justify-content-center">
+        <div class="d-flex justify-content-center align-items-center">
+          <i id="chat-icon" class="fa-regular fa-comments"></i>
+        </div>
+        <input type="submit" value="Add to Basket" class="btn btn-primary mx-auto my-4">
+      </div>
     </form>
   <% else %>
     <p>Log in to purchase items</p>
   <% end %>
 </div>
+
+<%# # mr-3 ml-3 %>
+<%# comment for push %>
