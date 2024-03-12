@@ -1,17 +1,21 @@
-<div class="container">
+<div class="container text-center">
 <h1>Checkout</h1>
-<p>These are yours items<p>
+<h3>These are yours items<h3>
 
 <% @basket.basket_products.each do |basket_product| %>
   <% product = Product.find(basket_product.product_id) %>
-  <ul>
-    <li><%= product.name %><%= basket_product.amount %></li>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between my-1 basket-item">
+    <div><%= basket_product.amount %> <%= product.name %></div>
+     <div><%= number_to_currency(basket_product.amount * product.price, unit: "€", format: "%n %u") %></div>
+    </li>
   </ul>
+
 <% end %>
 
-<p><%= @amount.round(2) %>€</p>
+<h4> Total <%= @amount.round(2) %>€</h4>
 <%= simple_form_for [@basket, @order] do |f| %>
 <%= f.input :total, as: :hidden, input_html: {value: "#{@amount.round(2)}"}%>
 <%= f.submit "Pay", class: "btn btn-primary btn-block"%>
-<% end %>
+<% end %> 
 </div>

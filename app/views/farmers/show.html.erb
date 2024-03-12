@@ -43,7 +43,7 @@
     <form action="/baskets/<%= @basket.id %>" method="patch">
       <div class="d-flex flex-wrap justify-content-around mb-4">
         <% @farmer.products.each do |product| %>
-          <div class="card-farmer border p-3 position-relative product-card mb-4">
+          <div class="card-farmer border p-3 position-relative product-card mb-2 mt-3">
             <% if product.product_photo.present? %>
               <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
             <% end %>

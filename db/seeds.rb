@@ -10,19 +10,32 @@ User.destroy_all
 
 puts "Creating Farmers 👩🏼‍🌾 👨🏽‍🌾 👩🏼‍🌾 👨🏽‍🌾"
 
-#farmers
 
-profile_photo1 = URI.open("https://p6.focus.de/img/fotos/id_259576981/oezdemir-kopie.jpg?im=Resize%3D%28800%2C450%29&impolicy=perceptual&quality=mediumHigh&hash=6dfac9a95898c860ae4fcdf7a6963cb8911587b26cecae894495ce6ca6c421ff")
-farm_photo1 = URI.open("https://i0.wp.com/forksinthedirt.com/wp-content/uploads/2019/08/IMG_20181004_120045479_HDR.jpg?resize=568%2C757&ssl=1")
-farm_photo2 = URI.open("https://www.kopos-projekt.de/sites/default/files/styles/gallery_preview/public/2023-03/20220725_Tiny%20Farms_Ernte_%C2%A9Carla%20Ulrich-4_0.jpg?itok=3gciXnIC")
-farm_photo3 = URI.open("https://img.etimg.com/thumb/width-1200,height-1200,imgsize-507598,resizemode-75,msid-95616465/wealth/save/want-to-take-up-farming-5-lessons-from-those-who-gave-up-and-their-struggles.jpg")
-farm_photo4 = URI.open("https://i0.wp.com/www.elkeskindergeschichten.de/wp-content/uploads/2013/10/Das-Apfeljahr-%C2%A9-lumix2004pixabay-apple-1873078_1920.jpg?resize=1360%2C765&ssl=1")
+profile_photo1 = URI.open("https://i.ibb.co/zbdTdjf/profile-photo1.jpg")
+farm_photo1 = URI.open("https://i.ibb.co/PxVBySY/farm-photo1.jpg")
+farm_photo2 = URI.open("https://i.ibb.co/dKPD8G1/farm-photo2.jpg")
+farm_photo3 = URI.open("https://i.ibb.co/2kyN3M0/farm-photo3-jpg.png")
+farm_photo4 = URI.open("https://i.ibb.co/jRs7Zhj/farm-photo4.jpg")
 
-profile_photo2 = URI.open("https://cdn.schwaebische.de/2024/01/13/88a20a79-7b05-4d43-ac04-1712cde66b71.jpeg")
-farm_photo5 = URI.open("https://columbiametro.com/wp-content/uploads/2021/09/iStock-1091697242-scaled.jpg")
-farm_photo6 = URI.open("https://www.kopos-projekt.de/sites/default/files/styles/gallery_preview/public/2023-03/20220702_Tiny%20Farms%20Academy_Blasen%20und%20Schwielen_%C2%A9Carla%20Ulrich-21.jpg")
-farm_photo7 = URI.open("https://thinkport.org/mptclassroom/mdfh/organic-farming/images/mfh-organic-main.jpg")
-farm_photo8 = URI.open("https://jacoblund.com/cdn/shop/products/bf8335394b08d71a9c71f24279cdf8dd.jpg?v=1694678770")
+profile_photo2 = URI.open("https://i.ibb.co/LtgjZkm/profile-photo2.jpg")
+farm_photo5 = URI.open("https://i.ibb.co/sH1cf8s/farm-photo5.jpg")
+farm_photo6 = URI.open("https://i.ibb.co/f21zMZ8/farm-photo6.jpg")
+farm_photo7 = URI.open("https://i.ibb.co/jWJGTny/farm-photo7.jpg")
+farm_photo8 = URI.open("https://i.ibb.co/bLr54yg/farm-photo8.jpg")
+
+
+# profile_photo1 = URI.open("https://p6.focus.de/img/fotos/id_259576981/oezdemir-kopie.jpg?im=Resize%3D%28800%2C450%29&impolicy=perceptual&quality=mediumHigh&hash=6dfac9a95898c860ae4fcdf7a6963cb8911587b26cecae894495ce6ca6c421ff")
+# farm_photo1 = URI.open("https://i0.wp.com/forksinthedirt.com/wp-content/uploads/2019/08/IMG_20181004_120045479_HDR.jpg?resize=568%2C757&ssl=1")
+# farm_photo2 = URI.open("https://www.kopos-projekt.de/sites/default/files/styles/gallery_preview/public/2023-03/20220725_Tiny%20Farms_Ernte_%C2%A9Carla%20Ulrich-4_0.jpg?itok=3gciXnIC")
+# farm_photo3 = URI.open("https://img.etimg.com/thumb/width-1200,height-1200,imgsize-507598,resizemode-75,msid-95616465/wealth/save/want-to-take-up-farming-5-lessons-from-those-who-gave-up-and-their-struggles.jpg")
+# farm_photo4 = URI.open("https://i0.wp.com/www.elkeskindergeschichten.de/wp-content/uploads/2013/10/Das-Apfeljahr-%C2%A9-lumix2004pixabay-apple-1873078_1920.jpg?resize=1360%2C765&ssl=1")
+
+# profile_photo2 = URI.open("https://cdn.schwaebische.de/2024/01/13/88a20a79-7b05-4d43-ac04-1712cde66b71.jpeg")
+# farm_photo5 = URI.open("https://columbiametro.com/wp-content/uploads/2021/09/iStock-1091697242-scaled.jpg")
+# farm_photo6 = URI.open("https://www.kopos-projekt.de/sites/default/files/styles/gallery_preview/public/2023-03/20220702_Tiny%20Farms%20Academy_Blasen%20und%20Schwielen_%C2%A9Carla%20Ulrich-21.jpg")
+# farm_photo7 = URI.open("https://thinkport.org/mptclassroom/mdfh/organic-farming/images/mfh-organic-main.jpg")
+# farm_photo8 = URI.open("https://jacoblund.com/cdn/shop/products/bf8335394b08d71a9c71f24279cdf8dd.jpg?v=1694678770")
+
 
 profile_photo3 = URI.open("https://www.goettinger-tageblatt.de/resizer/hPQeSWjNO2r-lJagqWyjq9Cs1m4=/767x557/filters:quality(70):format(webp)/cloudfront-eu-central-1.images.arcpublishing.com/madsack/4LZ36MCOM3TD42WT7PDZIXECLQ.jpg")
 farm_photo9 = URI.open("https://img.freepik.com/premium-photo/hands-holding-japanese-spring-onion-organic-produce-from-farm_53876-50621.jpg")
