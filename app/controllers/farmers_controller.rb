@@ -3,13 +3,6 @@ class FarmersController < ApplicationController
 
   def index
     @farmers = Farmer.all
-    # @markers = @farmers.geocoded.map do |farmer|
-    #   {
-    #     lat: farmer.latitude,
-    #     lng: farmer.longitude,
-    #     info_window_html: render_to_string(partial: "info_window", locals: { farmer: farmer })
-    #   }
-    # end
   end
 
   def show
@@ -52,9 +45,9 @@ class FarmersController < ApplicationController
   def geolocation_hash(farmer)
     {
       lat: farmer.latitude,
-      lng: farmer.longitude
+      lng: farmer.longitude,
       # If you want a costum marker do it here 👇🏻
-      # marker_html: render_to_string(partial: "marker", locals: { farmer: farmer })
+      marker_html: render_to_string(partial: "marker", locals: { farmer: farmer })
     }
   end
 
