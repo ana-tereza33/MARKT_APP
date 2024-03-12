@@ -35,15 +35,15 @@
     </div>
   </div>
 
-  <div class="description-farm mb-2 mt-4">
+  <div class="description-farm mb-4 mt-4">
     <p class="description-profile"><%= @farmer.description_farm %></p>
   </div>
 
-  <% if current_user %>
+<% if current_user %>
     <form action="/baskets/<%= @basket.id %>" method="patch">
-      <div class="d-flex flex-wrap justify-content-around">
+      <div class="d-flex flex-wrap justify-content-around mb-4">
         <% @farmer.products.each do |product| %>
-          <div class="card-farmer border p-3 position-relative product-card mb-2">
+          <div class="card-farmer border p-3 position-relative product-card mb-4">
             <% if product.product_photo.present? %>
               <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
             <% end %>
@@ -57,11 +57,10 @@
             </div>
           </div>
         <% end %>
-        <input type="submit" value="Add to Basket" class="btn btn-primary btn-block">
       </div>
+      <input type="submit" value="Add to Basket" class="btn btn-primary fixed-bottom mx-auto mb-4">
     </form>
   <% else %>
     <p>Log in to purchase items</p>
   <% end %>
-  <br />
 </div>
