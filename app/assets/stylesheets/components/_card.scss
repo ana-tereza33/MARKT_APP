@@ -97,14 +97,14 @@
     font-size: 28px;
   }
     //farmer card
-    // .card-farmer-show {
-    //   position: relative;
-    //   overflow: hidden;
-    //   background:rgba(255, 255, 255, 0.56);
-    //   outline: none;
-    //   margin-bottom: 20px;
-    //   border-radius: 15px;
-    // }
+    .card-farmer {
+      position: relative;
+      overflow: hidden;
+      background:rgba(255, 255, 255, 0.56);
+      outline: none;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
 
     .card-farmer-content-show {
       margin-top: 1px;
@@ -128,14 +128,14 @@
     // }
 
     //product cards
-    .product-card-show {
+    .product-card {
       width: 48%;
       border-radius: 15px;
     }
 
-    .card-product-img-show {
-      height: 200px;
-      width: 100%;
+    .card-product-img {
+      height: 200px !important;
+      width: 100%!important;
       object-fit: cover;
       border-radius: 15px;
     }
@@ -178,7 +178,7 @@
 
 
 
-// outtakes-if it brakes its here:)
+// outtakes-if it brakes its here:
 // cards
 // .card-farmer {
 //   position: relative;
