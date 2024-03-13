@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="col-auto">
-                  <input type="number" id="basket_product[][amount]" value="0" data-products-target="input" class="form-control no-spin smaller-input" style="max-width: 30px;">
+                  <input type="number" name="basket_product[][amount]" data-sum="0" data-products-target="input" class="form-control no-spin smaller-input" style="max-width: 30px;">
                 </div>
 
                 <div class="col-auto">
@@ -85,15 +85,3 @@
 <% else %>
   <p>Log in to purchase items</p>
 <% end %>
-
-<%= simple_form_for(@chatroom) do |f| %>
-  <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
-  <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
-  <div class="d-flex justify-content-center fixed-bottom mx-4 mb-8">
-    <%= button_tag type: 'submit', class: "mb-4" do %>
-        <i id="chat-icon" class="fa-regular fa-comments"></i>
-    <% end %>
-  </div>
-<% end %>
- 
-
