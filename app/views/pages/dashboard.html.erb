@@ -8,9 +8,9 @@
     <div class="green-box">
       <h2>Order #<%= order.id%></h2>
       <% order.order_products.each do |order_product| %>
-        <div class="d-flex product-box mt-3">
+        <div class="d-flex product-box-dashboard mt-3">
           <div style="margin-right: 20px;">
-             <%=  cl_image_tag(order_product.product.product_photo.key, width: 140, height:125, class: "product-image")%>
+             <%=  cl_image_tag(order_product.product.product_photo.key, width: 140, height:125, class: "product-image-dashboard")%>
           </div>
           <div class="">
             <p><%= order_product.product.name %></p>

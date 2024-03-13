@@ -1,0 +1,20 @@
+.no-spin::-webkit-outer-spin-button,
+.no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spin {
+  -moz-appearance: textfield;
+}
+
+.smaller-btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.smaller-input {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  max-width: 40px;
+}
