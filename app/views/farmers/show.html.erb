@@ -47,7 +47,6 @@
             <% if product.product_photo.present? %>
               <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img-show img-fluid" %>
             <% end %>
-
             <div class="card-farmer-content-show">
               <div class="card-farmer-details-show">
                 <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
@@ -63,12 +62,19 @@
       <div class="d-flex justify-content-center align-items-center">
         <i id="chat-icon" class="fa-regular fa-comments"></i>
       </div>
-      <input type="submit" value="Add to Basket" class="btn btn-primary mx-auto my-4">
-    </div>
-  </form>
-<% else %>
-  <p>Log in to purchase items</p>
-<% end %>
 
-<%# # mr-3 ml-3 %>
-<%# comment for push %>
+        <input type="submit" value="Add to Basket" class="btn fixed-bottom btn-primary mx-4 mb-4" >
+    </form>
+    <%= simple_form_for(@chatroom) do |f| %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
+      <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
+      <div class="d-flex justify-content-center fixed-bottom mx-4 mb-8">
+        <%= button_tag type: 'submit', class: "mb-4" do %>
+            <i id="chat-icon" class="fa-regular fa-comments"></i>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Log in to purchase items</p>
+  <% end %>
+</div>
