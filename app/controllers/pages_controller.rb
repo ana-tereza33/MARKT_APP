@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def dashboard
-    @orders = Order.all
+    @orders = Order.all.order(created_at: :desc)
+
   end
 
   def home

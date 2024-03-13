@@ -50,7 +50,7 @@
 
             <div class="card-farmer-content">
               <div class="card-farmer-details">
-                <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>€</p>
                 <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
                 <input type="number" name="basket_product[][amount]" class="" value="0">
               </div>
