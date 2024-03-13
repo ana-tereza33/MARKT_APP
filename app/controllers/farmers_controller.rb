@@ -8,6 +8,7 @@ class FarmersController < ApplicationController
   def show
     @farmer = Farmer.find(params[:id])
     @geolocation_hash = geolocation_hash(@farmer)
+    @chatroom = Chatroom.new
 
     if current_user
       if current_user.basket.nil?

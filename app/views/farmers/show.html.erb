@@ -60,6 +60,11 @@
       </div>
       <input type="submit" value="Add to Basket" class="btn btn-primary fixed-bottom mx-auto mb-4">
     </form>
+    <%= simple_form_for(@chatroom) do |f| %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
+      <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
+      <%= f.submit "Create chat", class: "btn btn-primary btn-block" %>
+    <% end %>
   <% else %>
     <p>Log in to purchase items</p>
   <% end %>
