@@ -4,21 +4,6 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%#  LEFT ICON%>
-    <div>
-      <%= link_to new_basket_order_path(@basket), class: "navbar-brand" do %>
-      <%# <%= link_to "Basket", '#', class: "dropdown-item" %>
-        <%= image_tag "basket markt.png" %>
-      <% end %>
-    </div>
-
-    <%# CENTER TITLE %>
-    <div>
-      <%= link_to root_path, class: "nav-link test-font" do %>
-        market
-      <% end %>
-    </div>
-
     <%# DROP DOWN MENU: SEARCH FARMERS CONTACT %>
 
 
@@ -49,5 +34,26 @@
       </ul>
     </div>
 
+    <%# CENTER TITLE %>
+    <div>
+      <%= link_to root_path, class: "nav-link test-font" do %>
+        market
+      <% end %>
+    </div>
+
+    <%#  BASKET ICON%>
+    <div>
+      <% if current_user %>
+        <%= link_to new_basket_order_path(@basket), class: "navbar-brand" do %>
+          <%# <%= link_to "Basket", '#', class: "dropdown-item" %>
+            <%= image_tag "basket markt.png" %>
+          <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "navbar-brand" do %>
+        <%# <%= link_to "Basket", '#', class: "dropdown-item" %>
+          <%= image_tag "basket markt.png" %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

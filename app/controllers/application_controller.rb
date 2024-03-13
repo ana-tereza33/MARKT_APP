@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_basket
-    if current_user.basket.nil?
-      @basket = Basket.new
+    if current_user&.basket.nil?
+      @basket = Basket.create(user: current_user)
     else
       @basket = current_user.basket
     end
