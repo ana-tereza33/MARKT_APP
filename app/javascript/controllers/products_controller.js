@@ -8,11 +8,13 @@ export default class extends Controller {
     console.log('Im connected');
   }
 
-  addProduct() {
-    let sum = this.inputTarget.value
-    let amount = parseInt(sum, 10)
+  addProduct(event) {
+    let amount = parseInt(this.inputTarget.dataset.sum, 10)
     amount += 1
+    this.inputTarget.dataset.sum = amount
     this.inputTarget.value = amount
+    console.log(this.inputTarget.dataset.sum);
+    console.log(this.inputTarget.value);
   }
 
   removeProduct() {
