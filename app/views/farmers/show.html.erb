@@ -1,5 +1,5 @@
 <div class="text-center mt-4">
-  <h1 class="font-enlarge"><%= @farmer.user.name %></h1>
+  <h1 class="font-enlarge-show"><%= @farmer.user.name %></h1>
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -35,34 +35,24 @@
     </div>
   </div>
 
-  <div class="description-farm mb-4 mt-4">
-    <p class="description-profile"><%= @farmer.description_farm %></p>
+  <div class="description-farm-show mb-2 mt-4">
+    <p class="description-profile-show"><%= @farmer.description_farm %></p>
   </div>
 
-<% if current_user %>
-  <form action="/baskets/<%= @basket.id %>" method="patch">
+  <% if current_user %>
+    <form action="/baskets/<%= @basket.id %>" method="patch">
+      <div class="d-flex flex-wrap justify-content-around">
+        <% @farmer.products.each do |product| %>
+          <div class="card-farmer-show border p-3 position-relative product-card-show mb-2">
+            <% if product.product_photo.present? %>
+              <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img-show img-fluid" %>
+            <% end %>
 
-    <div id="product-main" class="d-flex flex-wrap justify-content-around">
-      <% @farmer.products.each do |product| %>
-        <div class="card-farmer border p-3 position-relative product-card mb-4 mt-4">
-          <% if product.product_photo.present? %>
-            <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
-          <% end %>
-
-          <div class="card-farmer-content" data-controller="products">
-            <div class="card-farmer-details">
-              <p class="title mb-2"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
-              <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
-              <div class="row justify-content-center mt-3 mb-3">
-                <div class="col-auto">
-                  <button type="button" class="btn btn-outline-secondary btn-sm smaller-btn rounded-circle" data-action="click->products#removeProduct">-</button>
-                </div>
-                <div class="col-auto">
-                  <input type="number" id="basket_product[][amount]" value="0" data-products-target="input" class="form-control no-spin smaller-input" style="max-width: 30px;">
-                </div>
-                <div class="col-auto">
-                  <button type="button" class="btn btn-outline-secondary btn-sm smaller-btn rounded-circle" data-action="click->products#addProduct">+</button>
-                </div>
+            <div class="card-farmer-content-show">
+              <div class="card-farmer-details-show">
+                <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
+                <input type="number" name="basket_product[][amount]" class="" value="0">
               </div>
             </div>
           </div>

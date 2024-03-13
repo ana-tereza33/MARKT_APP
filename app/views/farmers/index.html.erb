@@ -7,17 +7,17 @@
       <% farmer_group.each do |farmer| %>
 
         <div class="col-md-6 card-garden-col">
-          <div class="card-farmer border p-3 position-relative">
+          <div class="card-farmer-index border p-3 position-relative">
             <% if farmer.main_photo.present? %>
-              <%= cl_image_tag farmer.main_photo.key,  transformation: [{ gravity: "face"}], alt: "#{farmer.name} Image", class: "card-farmer-img" %>
+              <%= cl_image_tag farmer.main_photo.key,  transformation: [{ gravity: "face"}], alt: "#{farmer.name} Image", class: "card-farmer-img-index" %>
               <% else %>
-                <%= image_tag "nice_default_farmer.png", alt: "nice default farmer", class: "card-farmer-img" %>
+                <%= image_tag "nice_default_farmer.png", alt: "nice default farmer", class: "card-farmer-img-index" %>
             <% end %>
-            <div class="card-farmer-content">
+            <div class="card-farmer-content-index">
               <div class="text-center mb-1">
-                <h2 class="title-farmer mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none font-enlarge text-dark-green" %></h2>
+                <h2 class="title-farmer-index mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none -index text-dark-green-index" %></h2>
               </div>
-              <div class="card-farmer-details">
+              <div class="card-farmer-details-index">
                 <p class="mb-2"><strong><%= farmer.title %></strong></p>
                 <p class="mb-2"><i class="fa-solid fa-seedling"></i> <%= farmer.description_profile %></p>
                 <p><i class="fas fa-map-marker-alt"></i> <%= farmer.address %></p>
