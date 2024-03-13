@@ -11,7 +11,7 @@ class ChatroomsController < ApplicationController
   end
 
   private
-  
+
   def chatroom_params
     params.require(:chatroom).permit(:user_id, :farmer_id)
   end
