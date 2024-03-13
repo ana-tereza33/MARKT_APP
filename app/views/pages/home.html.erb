@@ -11,7 +11,7 @@
 <%# Formular %>
   <div class="form-container">
     <%= form_tag("/search", method: "get") do %>
-      <%= text_field_tag(:postcode, nil, placeholder: "Postcode:", class: "form-control") %>
+      <%= text_field_tag(:postcode, nil, placeholder: "Postcode:", class: "fillform-home") %>
     <% end %>
     <%= link_to farmers_path, class: "dropdown-item" do %>
       <button class="btn btn-primary btn-block">

@@ -4,7 +4,7 @@
       <%= form_with url: search_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
+              class: "fillform-search",
               placeholder: "Find your Product!"
           %>
           </div>
@@ -19,15 +19,15 @@
       <div id="products" class="d-flex justify-content-between" style="flex-wrap: wrap;">
         <% if @products.any? %>
           <% @products.each do |product| %>
-          <div class="card-farmer border p-3 position-relative product-card" style="margin-top: 20px;">
+          <div class="card-farmer-search border p-3 position-relative product-card-search" style="margin-top: 20px;">
 
               <%# <div class="card-farmer border p-3 position-relative product-card"> %>
                 <% if product.product_photo.present? %>
-                  <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img" %>
+                  <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img-search" %>
                 <% end %>
 
-                <div class="card-farmer-content">
-                  <div class="card-farmer-details">
+                <div class="card-farmer-content-search">
+                  <div class="card-farmer-details-search">
                     <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
                   </div>
                 </div>

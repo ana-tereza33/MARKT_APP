@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # get 'chatrooms/show'
-  root to: "farmers#index"
-  
+  root to: "pages#home"
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end

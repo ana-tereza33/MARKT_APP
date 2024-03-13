@@ -8,14 +8,14 @@
           <%= f.input :email,
                       required: false,
                       autofocus: true,
-                      input_html: { autocomplete: "email" },
+                      input_html: { autocomplete: "email", class: 'fillform-new' },
                       label: false,
                       placeholder: "Email" %>
         </div>
         <div class="mb-3">
           <%= f.input :password,
                       required: false,
-                      input_html: { autocomplete: "current-password" },
+                      input_html: { autocomplete: "current-password", class: 'fillform-new' },
                       label: false,
                       placeholder: "Password" %>
         </div>

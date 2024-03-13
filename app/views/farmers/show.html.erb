@@ -1,5 +1,5 @@
 <div class="text-center mt-4">
-  <h1 class="font-enlarge"><%= @farmer.user.name %></h1>
+  <h1 class="font-enlarge-show"><%= @farmer.user.name %></h1>
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -35,21 +35,21 @@
     </div>
   </div>
 
-  <div class="description-farm mb-2 mt-4">
-    <p class="description-profile"><%= @farmer.description_farm %></p>
+  <div class="description-farm-show mb-2 mt-4">
+    <p class="description-profile-show"><%= @farmer.description_farm %></p>
   </div>
 
   <% if current_user %>
     <form action="/baskets/<%= @basket.id %>" method="patch">
       <div class="d-flex flex-wrap justify-content-around">
         <% @farmer.products.each do |product| %>
-          <div class="card-farmer border p-3 position-relative product-card mb-2">
+          <div class="card-farmer-show border p-3 position-relative product-card-show mb-2">
             <% if product.product_photo.present? %>
-              <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
+              <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img-show img-fluid" %>
             <% end %>
 
-            <div class="card-farmer-content">
-              <div class="card-farmer-details">
+            <div class="card-farmer-content-show">
+              <div class="card-farmer-details-show">
                 <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
                 <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
                 <input type="number" name="basket_product[][amount]" class="" value="0">
