@@ -7,4 +7,5 @@ class User < ApplicationRecord
   # validates :address, presence: true
   has_one :farmer, dependent: :destroy
   has_one :basket, dependent: :destroy
+  has_many :chatrooms, dependent: :destroy
 end

@@ -78,9 +78,22 @@
       <div class="d-flex justify-content-center align-items-center">
         <i id="chat-icon" class="fa-regular fa-comments"></i>
       </div>
+
       <input type="submit" value="Add to Basket" class="btn btn-primary mx-auto my-4">
     </div>
   </form>
 <% else %>
   <p>Log in to purchase items</p>
 <% end %>
+
+<%= simple_form_for(@chatroom) do |f| %>
+  <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
+  <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
+  <div class="d-flex justify-content-center fixed-bottom mx-4 mb-8">
+    <%= button_tag type: 'submit', class: "mb-4" do %>
+        <i id="chat-icon" class="fa-regular fa-comments"></i>
+    <% end %>
+  </div>
+<% end %>
+ 
+
