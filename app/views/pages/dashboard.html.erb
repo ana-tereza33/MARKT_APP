@@ -1,8 +1,9 @@
 <div class="container" id="dashboard-farmer">
   <% amount = 0 %>
   <div class="text-center">
-    <h1><strong>Your Orders</strong></h1>
-    <h3>These are your orderd items</h3>
+    <%# <h1 class="headermain"><strong>Your Orders</strong></h1> %>
+    <h1 class="headermain">Your Orders</h1>
+    <h3 class="headerthree">These are your orderd items</h3>
   </div>
   <% @orders.each_with_index do |order, index| %>
     <% total_amount = 0 %>
@@ -11,14 +12,14 @@
       <% order.order_products.each do |order_product| %>
         <div class="d-flex product-box-dashboard mt-3">
           <div style="margin-right: 20px;">
-             <%=  cl_image_tag(order_product.product.product_photo.key, width: 140, height:125, class: "product-image-dashboard")%>
+            <%=  cl_image_tag(order_product.product.product_photo.key, width: 140, height:136, class: "product-image-dashboard")%>
           </div>
-          <div class="">
-            <p><%= order_product.product.name %></p>
+          <div class="text mt-3" >
+            <p class="text"><%= order_product.product.name %></p>
 
-            <p>Quantity: <%= order_product.amount %></p>
+            <p class="text">Quantity: <%= order_product.amount %></p>
 
-            <p>Price: <%= order_product.product.price %>€/per</p>
+            <p class="text">Price: <%= order_product.product.price %>€/per</p>
           </div>
         </div>
 

@@ -15,15 +15,15 @@
               <i class="fa-solid fa-bars"></i>
             </div>
 
-            <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-start headermain" aria-labelledby="navbarDropdown">
               <% if user_signed_in? %>
-                <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item homepage-heading headertwo" %>
               <% else %>
-                <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+                <%= link_to "Log in", new_user_session_path, class: "dropdown-item homepage-heading headertwo" %>
               <% end %>
-              <%= link_to "Search", search_path, class: "dropdown-item" %>
-              <%= link_to "Farmers", farmers_path, class: "dropdown-item" %>
-              <%= link_to "My orders", dashboard_path, class: "dropdown-item" %>
+              <%= link_to "Search", search_path, class: "dropdown-item homepage-heading headertwo" %>
+              <%= link_to "Farmers", farmers_path, class: "dropdown-item homepage-heading headertwo" %>
+              <%= link_to "My orders", dashboard_path, class: "dropdown-item homepage-heading headertwo" %>
             </div>
           </li>
         <%# else %>
