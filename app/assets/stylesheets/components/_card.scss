@@ -1,3 +1,29 @@
+
+//Type
+.headermain{
+color: rgb(40, 83, 39) !important;
+font-size: 32px !important;
+}
+.headertwo{
+color: rgb(40, 83, 39) !important;
+font-size: 26px !important;
+}
+
+.headerthree{
+color: rgb(40, 83, 39) !important;
+font-size: 20px !important;
+}
+
+.subtitle{
+color: rgb(40, 83, 39) !important;
+font-size: 18px !important;
+}
+
+.text{
+color: rgb(40, 83, 39) !important;
+font-size: 16px !important;
+}
+
 // index-page
 
   .card-farmer-index {
@@ -142,7 +168,8 @@
 
     .description-farm-show {
       padding: 20px;
-      background-color: rgba(40, 83, 39, 0.23);
+      background:rgba(255, 255, 255, 0.56);
+      // background-color: rgba(40, 83, 39, 0.23);
       border-radius: 15px;
       margin: 10px 0;
       box-sizing: border-box;
