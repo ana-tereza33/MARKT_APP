@@ -5,6 +5,7 @@
     <h3>These are your orderd items</h3>
   </div>
   <% @orders.each_with_index do |order, index| %>
+    <% total_amount = 0 %>
     <div class="green-box">
       <h2>Order #<%= order.id%></h2>
       <% order.order_products.each do |order_product| %>
@@ -14,14 +15,18 @@
           </div>
           <div class="">
             <p><%= order_product.product.name %></p>
-            <p>Quantity: <%= order_product.amount%></p>
+
+            <p>Quantity: <%= order_product.amount %></p>
+
             <p>Price: <%= order_product.product.price %>€/per</p>
           </div>
         </div>
-        <% amount += order_product.product.price * order_product.amount %>
+
+        <% amount = (order_product.product.price * order_product.amount) %>
+        <% total_amount += amount %>
       <% end %>
       <div class="d-flex justify-content-center mt-4">
-        <h2>Total <%= amount.round(2) %>€</h2>
+        <h2>Total <%= total_amount.round(2) %>0€</h2>
       </div>
     </div>
   <% end %>

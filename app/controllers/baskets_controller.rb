@@ -6,7 +6,7 @@ class BasketsController < ApplicationController
   def update
     @basket = Basket.find(params[:id])
     params[:basket_product].each do |hash|
-      unless hash[:amount] == 0 || hash[:amount] == nil
+      unless hash[:amount] == 0 || hash[:amount] == nil || hash[:amount] == ""
         basket = BasketProduct.new(basket_id: @basket.id, product_id: hash[:product_id], amount: hash[:amount])
         basket.save!
       end

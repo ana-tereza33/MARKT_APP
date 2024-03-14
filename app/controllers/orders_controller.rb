@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
      @basket.basket_products.each do |basket_product|
       unless basket_product.amount == 0 || basket_product.amount == nil
         product = Product.find(basket_product.product_id)
-        sub_amount = product.price * basket_product.amount
+        sub_amount = (product.price * basket_product.amount)
         @amount += sub_amount
       end
      end
