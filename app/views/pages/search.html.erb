@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12">
-      <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+      <%= form_with url: search_path, method: :get, class: "d-flex justify-content-center" do %>
         <%= text_field_tag :query,
               params[:query],
-              class: "fillform-search",
+              class: "fillform-search ",
               placeholder: "Find your Product!"
           %>
           </div>
-          <div class="col-12">
+          <div class="col-12 d-flex justify-content-center">
         <%= submit_tag "Search", name: "", class: "btn btn-primary button" %>
       <% end %>
     </div>
@@ -28,7 +28,7 @@
 
                 <div class="card-farmer-content-search">
                   <div class="card-farmer-details-search">
-                    <p class="title"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+                    <p class="title text"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
                   </div>
                 </div>
             <%# <img src="" alt="">
