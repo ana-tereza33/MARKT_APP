@@ -1,7 +1,8 @@
-<div class="text-center mt-4">
+
+<div class="text-center mt-3">
   <h1 class="font-enlarge-show headermain"><%= @farmer.user.name %></h1>
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide mt-4" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <% if @farmer.main_photo.present? %>
@@ -52,9 +53,11 @@
 
           <div class="card-farmer-content-show" data-controller="products">
             <div class="card-farmer-details-show">
-              <p class="title mb-2"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %> €</p>
+              
+              <p class="title text-center mb-2 mt-3"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+
               <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
-              <div class="row justify-content-center mt-3 mb-3">
+              <div class="row justify-content-center mt-2 mb-2">
 
                 <div class="col-auto px-1">
                   <button type="button" class="btn btn-outline-secondary btn-sm smaller-btn rounded-circle" data-action="click->products#removeProduct">-</button>
