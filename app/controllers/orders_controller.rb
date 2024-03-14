@@ -4,9 +4,11 @@ class OrdersController < ApplicationController
     @basket = Basket.find(params[:basket_id])
     @amount = 0
      @basket.basket_products.each do |basket_product|
-      product = Product.find(basket_product.product_id)
-      sub_amount = product.price * basket_product.amount
-      @amount += sub_amount
+      unless basket_product.amount == 0 || basket_product.amount == nil
+        product = Product.find(basket_product.product_id)
+        sub_amount = product.price * basket_product.amount
+        @amount += sub_amount
+      end
      end
   end
 
