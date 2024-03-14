@@ -181,6 +181,7 @@ font-size: 16px !important;
   // basket_orders?
   .green-box-dashboard {
     // background-color: #0064004b;
+
     padding: 15px;
     border-radius: 15px;
     margin-top: 30px;
@@ -191,8 +192,8 @@ font-size: 16px !important;
   }
 
   .product-box-dashboard {
-    border: solid 0.5px #006400;
-    background-color: #0064001b;
+    // border: solid 0.5px #006400;
+    background-color:rgba(255, 255, 255, 0.56);
     align-items: center;
     border-radius: 15px;
   }
