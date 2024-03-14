@@ -4,7 +4,7 @@
       <h2 class="mb-4 headertwo">Log in</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
           <%= f.input :email,
                       required: false,
                       autofocus: true,
@@ -12,7 +12,7 @@
                       label: false,
                       placeholder: "Email" %>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
           <%= f.input :password,
                       required: false,
                       input_html: { autocomplete: "current-password", class: 'fillform-new' },
@@ -20,12 +20,12 @@
                       placeholder: "Password" %>
         </div>
 
-        <div class="mb-3 form-check text">
+        <div class="mb-3 form-check text d-flex justify-content-center">
           <%= f.input :remember_me, as: :boolean, label: "Remember me" if devise_mapping.rememberable? %>
         </div>
 
-        <div class="mb-3 d-grid gap-2">
-          <%= f.button :submit, "Log in", class: 'button btn btn-primary' %>
+        <div class="mb-3 d-grid gap-2 d-flex justify-content-center">
+          <%= f.button :submit, "Log in", class: 'button btn btn-primary', id: "login-submit-button" %>
         </div>
       <% end %>
 
