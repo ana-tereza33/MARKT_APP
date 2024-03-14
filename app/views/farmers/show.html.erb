@@ -45,7 +45,7 @@
 
     <div id="product-main" class="d-flex flex-wrap justify-content-around">
       <% @farmer.products.each do |product| %>
-        <div class="card-farmer border p-3 position-relative product-card mb-4 mt-4">
+        <div class="card-farmer border p-3 position-relative product-card mb-2 mt-2">
           <% if product.product_photo.present? %>
             <%= cl_image_tag product.product_photo.key, alt: "#{product.name} Image", class: "card-product-img img-fluid" %>
           <% end %>
@@ -56,15 +56,15 @@
               <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
               <div class="row justify-content-center mt-3 mb-3">
 
-                <div class="col-auto">
+                <div class="col-auto px-1">
                   <button type="button" class="btn btn-outline-secondary btn-sm smaller-btn rounded-circle" data-action="click->products#removeProduct">-</button>
                 </div>
 
-                <div class="col-auto">
+                <div class="col-auto px-1">
                   <input type="number" name="basket_product[][amount]" data-sum="0" data-products-target="input" class="form-control no-spin smaller-input" style="max-width: 30px;">
                 </div>
 
-                <div class="col-auto">
+                <div class="col-auto px-1">
                   <button type="button" class="btn btn-outline-secondary btn-sm smaller-btn rounded-circle" data-action="click->products#addProduct">+</button>
                 </div>
 
@@ -92,7 +92,7 @@
   <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
   <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
   <div class="d-flex justify-content-center fixed-bottom buttons-box">
-    <%= button_tag type: 'submit', class: "mb-4 button-round" do %>
+    <%= button_tag type: 'submit', class: "mb-4 button-round rounded-circle" do %>
         <i id="chat-icon" class="fa-regular fa-comments"></i>
     <% end %>
   </div>

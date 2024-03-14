@@ -9,12 +9,16 @@
 }
 
 .smaller-btn {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.4rem; /*Höhe*/
   font-size: 0.8rem;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 0.8rem;
 }
 
 .smaller-input {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  max-width: 40px;
+  padding: 0.20rem 0.5rem;
+  font-size: 0.7rem;
+  max-width: 30px;
 }
