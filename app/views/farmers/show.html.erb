@@ -88,12 +88,14 @@
   <p>Log in to purchase items</p>
 <% end %>
 
-<%= simple_form_for(@chatroom) do |f| %>
-  <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
-  <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
-  <div class="d-flex justify-content-center fixed-bottom buttons-box">
-    <%= button_tag type: 'submit', class: "mb-4 button-round" do %>
-        <i id="chat-icon" class="fa-regular fa-comments"></i>
-    <% end %>
-  </div>
+<% if current_user %>
+  <%= simple_form_for(@chatroom) do |f| %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
+    <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
+    <div class="d-flex justify-content-center fixed-bottom buttons-box">
+      <%= button_tag type: 'submit', class: "mb-4 button-round" do %>
+          <i id="chat-icon" class="fa-regular fa-comments"></i>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
