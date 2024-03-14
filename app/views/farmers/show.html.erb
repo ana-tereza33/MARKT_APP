@@ -74,26 +74,24 @@
         </div>
       <% end %>
     </div>
-    <div id="product-footer" class="fixed-bottom d-flex justify-content-center">
-
-      <div class="d-flex justify-content-center align-items-center">
-        <i id="chat-icon" class="fa-regular fa-comments"></i>
-      </div>
-
+    <div id="product-footer" class="fixed-bottom d-flex justify-content-start">
+      <div style="width: 50px"></div> <!-- danger --->
       <input type="submit" value="Add to Basket" class="btn btn-primary mx-auto my-4 button">
-
     </div>
-  </form>ox
+  </form>
 <% else %>
   <p>Log in to purchase items</p>
 <% end %>
 
-<%= simple_form_for(@chatroom) do |f| %>
-  <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
-  <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
-  <div class="d-flex justify-content-center fixed-bottom buttons-box">
-    <%= button_tag type: 'submit', class: "mb-4 button-round rounded-circle" do %>
-        <i id="chat-icon" class="fa-regular fa-comments"></i>
-    <% end %>
-  </div>
-<% end %>
+
+<div id="chat-button-bottom">
+  <%= simple_form_for(@chatroom) do |f| %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id }%>
+    <%= f.input :farmer_id, as: :hidden, input_html: { value: @farmer.id }%>
+    <div>
+      <%= button_tag type: 'submit', class: "mb-4" do %>
+          <i id="chat-icon" class="fa-regular fa-comments"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>
