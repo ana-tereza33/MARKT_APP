@@ -1,5 +1,5 @@
 <div class="text-center mt-4">
-  <h1 class="font-enlarge-show"><%= @farmer.user.name %></h1>
+  <h1 class="font-enlarge-show headermain"><%= @farmer.user.name %></h1>
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -37,7 +37,7 @@
 
 
  <div class="description-farm-show mb-2 mt-4">
-    <p class="description-profile-show"><%= @farmer.description_farm %></p>
+    <p class="description-profile-show text"><%= @farmer.description_farm %></p>
   </div>
 
 <% if current_user %>
@@ -52,7 +52,7 @@
 
           <div class="card-farmer-content-show" data-controller="products">
             <div class="card-farmer-details-show">
-              <p class="title mb-2"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %>$</p>
+              <p class="title mb-2"><i class="fas fa-tag"></i> <%= product.name %> <%= product.price.round(2) %> €</p>
               <input type="hidden" name="basket_product[][product_id]" value="<%= product.id%>">
               <div class="row justify-content-center mt-3 mb-3">
 
