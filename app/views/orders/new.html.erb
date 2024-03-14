@@ -17,6 +17,6 @@
 <h4> Total <%= @amount.round(2) %>€</h4>
 <%= simple_form_for [@basket, @order] do |f| %>
 <%= f.input :total, as: :hidden, input_html: {value: "#{@amount.round(2)}"}%>
-<%= f.submit "Pay", class: "btn btn-primary btn-block"%>
+<%= f.submit "Pay", class: "btn btn-primary btn-block button"%>
 <% end %>
 </div>
