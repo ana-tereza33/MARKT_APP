@@ -35,7 +35,7 @@ farm_photo10 = URI.open("https://i.ibb.co/K2xLHQ8/farm-photo10.jpg")
 farm_photo11 = URI.open("https://i.ibb.co/Vp4fndQ/farm-photo11.jpg")
 farm_photo12 = URI.open("https://i.ibb.co/4pcGG3K/farm-photo12.jpg")
 
-profile_photo4 = URI.open("https://i.ibb.co/Ptrcz2p/profile-photo4.jpg")
+profile_photo4 = URI.open("https://i.ibb.co/2WV45NS/cropped-woman-farmer-copy.jpg")
 farm_photo13 = URI.open("https://i.ibb.co/pwC0B6v/farm-photo13.jpg")
 farm_photo14 = URI.open("https://i.ibb.co/02ZfQm3/farm-photo14.jpg")
 farm_photo15 = URI.open("https://i.ibb.co/HdhWKfL/farm-photo15.jpg")
@@ -65,7 +65,7 @@ product_photo4 = URI.open("https://images.squarespace-cdn.com/content/v1/5de5df7
 user1_cem = User.create(name: "Cem Özdemir", address: "Am Alten Markt 9, Potsdam, Brandenburg", email: "cem@email.com", password: "123456", is_farmer: true)
 user2 = User.create(name: "Harald Müller", address: "Brandenburger Str. 28, Brandenburg an der Havel, Brandenburg", email: "mueller@email.com", password: "123456", is_farmer: true)
 user3 = User.create(name: "Rudolf Schneider", address: "Berliner Str. 28, Frankfurt (Oder), Brandenburg", email: "schneider@email.com", password: "123456", is_farmer: true)
-user4 = User.create(name: "Dieter Krause", address: "Spremberger Str. 1, Cottbus, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
+user4 = User.create(name: "Maria Krause", address: "Spremberger Str. 1, Cottbus, Brandenburg", email: "krause@email.com", password: "123456", is_farmer: true)
 user5 = User.create(name: "Peter Weber", address: "Bernauer Str. 65, Oranienburg, Brandenburg", email: "weber@email.com", password: "123456", is_farmer: true)
 herman_farmer_user = User.create(name: "Herman Feldmann", address: "Bürgermeister-Franz-Str. 16, Brandenburg an der Havel, Brandenburg", email: "feldmann@email.com", password: "123456", is_farmer: true)
 
