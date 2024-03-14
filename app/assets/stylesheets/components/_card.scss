@@ -1,130 +1,97 @@
-
 //Type
 
 .headermain{
-color: rgb(40, 83, 39) !important;
-font-size: 32px !important;
-}
-.headertwo{
-color: rgb(40, 83, 39) !important;
-font-size: 26px !important;
-}
-
-.headerthree{
-color: rgb(40, 83, 39) !important;
-font-size: 20px !important;
-}
-
-.subtitle{
-color: rgb(40, 83, 39) !important;
-font-size: 18px !important;
-}
-
-.text{
-color: rgb(40, 83, 39) !important;
-font-size: 16px !important;
-}
-
-// index-page
-
-  .card-farmer-index {
-    position: relative;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.56);
-    outline: none;
-    margin-bottom: 20px;
-    border-radius: 15px;
+  color: rgb(40, 83, 39) !important;
+  font-size: 32px !important;
+  }
+  .headertwo{
+  color: rgb(40, 83, 39) !important;
+  font-size: 26px !important;
   }
 
-  .card-farmer-img-index {
-    height: 205px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 10px;
+  .headerthree{
+  color: rgb(40, 83, 39) !important;
+  font-size: 20px !important;
   }
 
-  .card-farmer-content-index {
-    margin-top: 1px;
-    margin-bottom: 10px;
+  .subtitle{
+  color: rgb(40, 83, 39) !important;
+  font-size: 18px !important;
   }
 
-  .card-farmer-details-index {
-    // h2 farmer title und desc and adress
-    display: flex;
-    flex-direction: column;
+  .text{
+  color: rgb(40, 83, 39) !important;
+  font-size: 16px !important;
   }
 
-      //farmer cards
-      .title-farmer-index {
-        // farmer h1
-        font-size: 17px;
-        font-weight: bold;
-        margin: 0 0 3px;
-      }
+  // index-page
 
-      .font-enlarge-index {
-        font-size: 28px;
-      }
-
-      .card-farmer-content-index {
-        margin-top: 1px;
-        margin-bottom: 10px;
-      }
-
-      .card-farmer-details-index {
-        // h2 farmer title und desc and adress
-        display: flex;
-        flex-direction: column;
-      }
-
-  .text-dark-green-index {
-    color: #006400;
-  }
-
-
-// search-page
-  .card-farmer-search {
-    position: relative;
-    overflow: hidden;
-    background:rgba(255, 255, 255, 0.56);
-    outline: none;
-    margin-bottom: 20px;
-    border-radius: 15px;
-  }
-
-  .card-farmer-content-search {
-    margin-top: 1px;
-    margin-bottom: 10px;
-  }
-
-  .card-farmer-details-search {
-    // h2 farmer title und desc and adress
-    display: flex;
-    flex-direction: column;
-  }
-
-    //product card
-    .product-card-search {
-      width: 48%;
+    .card-farmer-index {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.56);
+      outline: none;
+      margin-bottom: 20px;
       border-radius: 15px;
     }
 
-    .card-product-img-search {
-      height: 200px;
+    .card-farmer-img-index {
+      height: 205px;
       width: 100%;
       object-fit: cover;
       border-radius: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card-farmer-content-index {
+      margin-top: 1px;
+      margin-bottom: 10px;
+    }
+
+    .card-farmer-details-index {
+      // h2 farmer title und desc and adress
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title-bar {
+      display: block;
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #006400 20%, #006400 80%, transparent);
+      margin: 2px auto 5px;
+    }
+
+        //farmer cards
+        .title-farmer-index {
+          // farmer h1
+          font-size: 17px;
+          font-weight: bold;
+          margin: 0 0 3px;
+        }
+
+        .font-enlarge-index {
+          font-size: 28px;
+        }
+
+        .card-farmer-content-index {
+          margin-top: 1px;
+          margin-bottom: 10px;
+        }
+
+        .card-farmer-details-index {
+          // h2 farmer title und desc and adress
+          display: flex;
+          flex-direction: column;
+        }
+
+    .text-dark-green-index {
+      color: #006400;
     }
 
 
-//show-page
-  //title h1
-  .font-enlarge-show {
-    font-size: 28px;
-  }
-    //farmer card
-    .card-farmer {
+  // search-page
+    .card-farmer-search {
       position: relative;
       overflow: hidden;
       background:rgba(255, 255, 255, 0.56);
@@ -133,47 +100,109 @@ font-size: 16px !important;
       border-radius: 15px;
     }
 
-    .card-farmer-content-show {
+    .card-farmer-content-search {
       margin-top: 1px;
       margin-bottom: 10px;
     }
 
-    .card-farmer-details-show {
+    .card-farmer-details-search {
       // h2 farmer title und desc and adress
       display: flex;
       flex-direction: column;
     }
 
-    .card-farmer-details .description-profile-show{
-      font-size: 12px;
-      color: #333;
+      //product card
+      .product-card-search {
+        width: 48%;
+        border-radius: 15px;
+      }
+
+      .card-product-img-search {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+
+  //show-page
+    //title h1
+    .font-enlarge-show {
+      font-size: 28px;
+    }
+      //farmer card
+      .card-farmer {
+        position: relative;
+        overflow: hidden;
+        background:rgba(255, 255, 255, 0.56);
+        outline: none;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+
+      .card-farmer-content-show {
+        margin-top: 1px;
+        margin-bottom: 10px;
+      }
+
+      .card-farmer-details-show {
+        // h2 farmer title und desc and adress
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-farmer-details .description-profile-show{
+        font-size: 12px;
+        color: #333;
+      }
+
+      // .description-profile-show{
+      //   font-size: 12px;
+      //   color: #333;
+      // }
+
+      //product cards
+      .product-card {
+        width: 48%;
+        border-radius: 15px;
+      }
+
+      .card-product-img {
+        height: 200px !important;
+        width: 100%!important;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .description-farm-show {
+        padding: 20px;
+        background:rgba(255, 255, 255, 0.56);
+        // background-color: rgba(40, 83, 39, 0.23);
+        border-radius: 15px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+
+
+  //dashboard
+    // basket_orders?
+    .green-box-dashboard {
+      // background-color: #0064004b;
+
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 30px;
     }
 
-    // .description-profile-show{
-    //   font-size: 12px;
-    //   color: #333;
-    // }
-
-    //product cards
-    .product-card {
-      width: 48%;
-      border-radius: 15px;
+    .product-image-dashboard {
+      border-radius: 15px 0 0 15px;
     }
 
-    .card-product-img {
-      height: 200px !important;
-      width: 100%!important;
-      object-fit: cover;
+    .product-box-dashboard {
+      // border: solid 0.5px #006400;
+      background-color:rgba(255, 255, 255, 0.56);
+      align-items: center;
       border-radius: 15px;
-    }
-
-    .description-farm-show {
-      padding: 20px;
-      background:rgba(255, 255, 255, 0.56);
-      // background-color: rgba(40, 83, 39, 0.23);
-      border-radius: 15px;
-      margin: 10px 0;
-      box-sizing: border-box;
     }
 
 
@@ -204,154 +233,151 @@ font-size: 16px !important;
 
 
 
+  // outtakes-if it brakes its here:
+  // cards
+  // .card-farmer {
+  //   position: relative;
+  //   overflow: hidden;
+  //   background: rgba(40, 83, 39, 0.23);
+  //   outline: none;
+  //   margin-bottom: 20px;
+  //   border-radius: 15px;
+  // }
 
+  // .card-farmer-show {
+  //   position: relative;
+  //   overflow: hidden;
+  //   // background: rgba(40, 83, 39, 0.23);
+  //   outline: none;
+  //   margin-bottom: 20px;
+  //   border-radius: 15px;
+  // }
 
+  // .font-enlarge {
+  //   font-size: 28px;
+  // }
 
-// outtakes-if it brakes its here:
-// cards
-// .card-farmer {
-//   position: relative;
-//   overflow: hidden;
-//   background: rgba(40, 83, 39, 0.23);
-//   outline: none;
-//   margin-bottom: 20px;
-//   border-radius: 15px;
-// }
+  //  .card-farmer-content {
+  //   margin-top: 1px;
+  //   margin-bottom: 10px;
+  // }
 
-// .card-farmer-show {
-//   position: relative;
-//   overflow: hidden;
-//   // background: rgba(40, 83, 39, 0.23);
-//   outline: none;
-//   margin-bottom: 20px;
-//   border-radius: 15px;
-// }
+  // .card-farmer-details {
+  //   // h2 farmer title und desc and adress
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 
-// .font-enlarge {
-//   font-size: 28px;
-// }
+  //can't find this:
+  // .card-farmer-details p {
+  //   margin: 5px 0;
+  // }
 
-//  .card-farmer-content {
-//   margin-top: 1px;
-//   margin-bottom: 10px;
-// }
+  // //.card-farmer-details i {
+  //   margin-right: 5px;
+  // }
 
-// .card-farmer-details {
-//   // h2 farmer title und desc and adress
-//   display: flex;
-//   flex-direction: column;
-// }
+  // // .card-farmer-details .title{
+  //   font-size: 12px;
+  //   color: #333;
+  // }
 
-//can't find this:
-// .card-farmer-details p {
-//   margin: 5px 0;
-// }
+  // .card-farmer-details .description-profile{
+  //   font-size: 12px;
+  //   color: #333;
+  // }
 
-// //.card-farmer-details i {
-//   margin-right: 5px;
-// }
+  //can't find this
+  // .card-farmer-details .address {
+  //   font-size: 12px;
+  //   color: #333;
+  // }
 
-// // .card-farmer-details .title{
-//   font-size: 12px;
-//   color: #333;
-// }
+  // .product-card {
+  //   width: 48%;
+  //   border-radius: 15px;
+  // }
 
-// .card-farmer-details .description-profile{
-//   font-size: 12px;
-//   color: #333;
-// }
+  // .card-product-img {
+  //   height: 200px;
+  //   width: 100%;
+  //   object-fit: cover;
+  //   border-radius: 15px;
+  // }
 
-//can't find this
-// .card-farmer-details .address {
-//   font-size: 12px;
-//   color: #333;
-// }
+  //can't find this
+  // .card-farmer-details .user a, .title-farmer a {
+  //   color: #006400;
+  // }
 
-// .product-card {
-//   width: 48%;
-//   border-radius: 15px;
-// }
+  //.text-center {
+  //   text-align: center;
+  // }
 
-// .card-product-img {
-//   height: 200px;
-//   width: 100%;
-//   object-fit: cover;
-//   border-radius: 15px;
-// }
+  //.card-farmer-details .mb-2 {
+  //   margin-bottom: 5px;
+  // }
 
-//can't find this
-// .card-farmer-details .user a, .title-farmer a {
-//   color: #006400;
-// }
+  //can't find this
+  //.new-farmer-card {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100%;
+  //   margin-bottom: 20px;
+  //   overflow: hidden;
+  //   box-sizing: border-box;
+  // }
 
-//.text-center {
-//   text-align: center;
-// }
+  //can't find this
+  // .main-photo {
+  //   width: 100%;
+  // }
 
-//.card-farmer-details .mb-2 {
-//   margin-bottom: 5px;
-// }
-
-//can't find this
-//.new-farmer-card {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   margin-bottom: 20px;
-//   overflow: hidden;
-//   box-sizing: border-box;
-// }
-
-//can't find this
-// .main-photo {
-//   width: 100%;
-// }
-
-// .main-photo img {
-//   width: 100%;
-//   height: auto;
-//   object-fit: cover;
-//   border-radius: 15px;
-//   margin-bottom: 10px;
-// }
+  // .main-photo img {
+  //   width: 100%;
+  //   height: auto;
+  //   object-fit: cover;
+  //   border-radius: 15px;
+  //   margin-bottom: 10px;
+  // }
 
 
 
 
 
-// h1bfarmer{
-//   font-family: 'Inter', sans-serif;
-//   color: $green-text;
-//   opacity: 0.81;
-//   font-size: 15px;
-//   font-weight: bold;
-// }
+  // h1bfarmer{
+  //   font-family: 'Inter', sans-serif;
+  //   color: $green-text;
+  //   opacity: 0.81;
+  //   font-size: 15px;
+  //   font-weight: bold;
+  // }
 
-// h2 farm{
-//   font-family: 'Inter', sans-serif;
-//   color: $green-text;
-//   opacity: 0.65;
-//   font-size: 11px;
-//   font-weight: medium;
-// }
+  // h2 farm{
+  //   font-family: 'Inter', sans-serif;
+  //   color: $green-text;
+  //   opacity: 0.65;
+  //   font-size: 11px;
+  //   font-weight: medium;
+  // }
 
-// p desc{
-//   font-family: 'Inter', sans-serif;
-//   color: $green-text;
-//   opacity: 0.65;
-//   font-size: 11px;
-//   font-weight: regular;
-// }
+  // p desc{
+  //   font-family: 'Inter', sans-serif;
+  //   color: $green-text;
+  //   opacity: 0.65;
+  //   font-size: 11px;
+  //   font-weight: regular;
+  // }
 
-// p adress{
-//   //   font-family: 'Inter', sans-serif;
-//   //   color: $green-text;
-//   //   opacity: 0.65;
-//   //   font-size: 10px;
-//   //   font-weight: semi-bold;
-//   // }
+  // p adress{
+  //   //   font-family: 'Inter', sans-serif;
+  //   //   color: $green-text;
+  //   //   opacity: 0.65;
+  //   //   font-size: 10px;
+  //   //   font-weight: semi-bold;
+  //   // }
 
-.farmer-photo {
-  border-radius: 10px;
-  // height: 250px;
-}
+  .farmer-photo {
+    border-radius: 10px;
+    // height: 250px;
+  }
