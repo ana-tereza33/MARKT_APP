@@ -1,6 +1,8 @@
 <div class="container">
-  <h1>Our Farmers</h1>
-  <p>Take a look at our local Farmers</p>
+ <div class="text-center">
+  <h1 class="headermain">Our Farmers</h1>
+  <p class="headerthree">Take a look at our local Growers</p>
+  </div>
 
   <div class="row row-margin">
     <% @farmers.each_slice(2) do |farmer_group| %>
@@ -15,12 +17,12 @@
             <% end %>
             <div class="card-farmer-content-index">
               <div class="text-center mb-1">
-                <h2 class="title-farmer-index mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none -index text-dark-green-index" %></h2>
+                <h2 class="title-farmer-index mb-0"><%= link_to "#{farmer.user.name}", farmer_path(farmer), class: "text-decoration-none -index text-dark-green-index headerthree" %></h2>
               </div>
               <div class="card-farmer-details-index">
-                <p class="mb-2"><strong><%= farmer.title %></strong></p>
-                <p class="mb-2"><i class="fa-solid fa-seedling"></i> <%= farmer.description_profile %></p>
-                <p><i class="fas fa-map-marker-alt"></i> <%= farmer.address %></p>
+                <p class="mb-2 text"><strong><%= farmer.title %></strong></p>
+                <p class="mb-2 text"><i class="fa-solid fa-seedling"></i> <%= farmer.description_profile %></p>
+                <p><i class="fas fa-map-marker-alt text"></i> <%= farmer.address %></p>
               </div>
             </div>
           </div>

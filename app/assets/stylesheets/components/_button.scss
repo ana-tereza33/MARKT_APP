@@ -42,3 +42,15 @@
 .button-round {
   border-radius: 50%;
 }
+
+#chat-button-bottom {
+  position: fixed;
+  bottom: -5px;
+  left: 9px;
+  z-index: 9999;
+}
+
+#chat-button-bottom button {
+  background-color: rgba($color: #000000, $alpha: 0);
+  border: none;
+}
