@@ -6,7 +6,7 @@
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
 
-  <div class="messages" data-chatroom-subscription-target="messages">
+  <div class="messages fillform-chat" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
@@ -22,5 +22,5 @@
     placeholder: "Type your message here...",
     wrapper_html: { class: "row justify-content-center" }
   %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3 button" %>
 <% end %>
