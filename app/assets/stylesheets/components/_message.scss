@@ -4,6 +4,28 @@
   margin: 5px 0;
   padding: 10px 0;
   min-height: 60px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.56)!important;
+  color: #285327!important;
+  font-style: italic;
+  border: none!important;
+  box-shadow: none!important;
+  border-radius: 5px;
+}
+
+#chat-form input.button {
+  max-width: none;
+  min-height: 30px;
+  margin: 5px 0;
+  padding: 10px 0;
+  min-height: 60px;
+  text-align: center;
+  background-color: rgb(40, 83, 39) !important;
+  color: rgb(245, 245, 245)!important;
+  font-style: italic;
+  border: none!important;
+  box-shadow: none!important;
+  border-radius: 5px;
 }
 
 #chat-form div {
